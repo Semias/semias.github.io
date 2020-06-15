@@ -1,0 +1,43 @@
+@charset "utf-8";
+
+@font-face {
+  font-family: "Oswald-ExtraLight";
+  src: url("../../schriften/Oswald-ExtraLight.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald-Regular";
+  src: url("../../schriften/Oswald-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald-SemiBold";
+  src: url("../../schriften/Oswald-SemiBold.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto-Light";
+  src: url("../../schriften/Roboto-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*############HEADER############*/
+
+/*############HEADER-END############*/
+
+/*############SECTION01-BEGIN############*/
+
+/*############SECTION01-END############*/
+
+/*############SECTION01-BEGIN############*/
+
+/*############SECTION01-END############*/
+
+/*############FOOTER-BEGIN############*/

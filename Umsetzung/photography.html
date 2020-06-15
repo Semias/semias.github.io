@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Gallographic</title>
+
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+
+
+    <link type="text/css" href="css/photography.css" rel="stylesheet">
+    <link type="text/css" href="css/responsive.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="js/home.js"></script>
+    <script type="text/javascript" src="js/lightbox.js"></script>
+
+
+
+
+
+</head>
+
+<body>
+    <div class="main-wrap">
+
+        <div id="menue_open">
+            <div id="menue_list">
+                <ul>
+                    <li><a href="photography.html">Photography</a></li>
+                    <li><a href="">Design</a></li>
+                    <li><a href="about-me.html">About me</a></li>
+                </ul>
+            </div>
+        </div>
+        <header id="header">
+            <div class="contentbereich">
+                <div id="header01">
+                    <div id="logo">
+                        <a href="home.html"></a>
+                    </div>
+                    <div id="menue"></div>
+                </div>
+            </div>
+        </header>
+        <section id="section01">
+            <div class="contentbereich">
+                <div id="gallery">
+                    <!--Bilder unten begin-->
+                    <div class="column" id="autumm">
+                        <div style="width:100%;background-image:url(../images/autumm/autumm01.jpg);background-repeat: no-repeat;background-position: center center;background-size: 100%;height: 350px;" onclick="openModal('myAutummModal', 'myAutummSlides');currentSlide(1)" class="hover-shadow cursor"></div>
+                        <h1><span>autumm</span><br>NOV | '19<br></h1>
+                        <div id="myAutummModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myAutummModal')">&times;</span>
+                            <div id="myAutummSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/autumm/autumm01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm04.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm05.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm06.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm07.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm08.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/autumm/autumm09.jpg" style="width:100%"></div>
+                                <!--Bilder unten begin-->
+                                <!--- <div class="column">
+                          <img class="demo cursor" src="../images/XT206485.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+                        </div>
+                        <div class="column">
+                          <img class="demo cursor" src="../images/ChinaSaeule.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+                        </div>
+                        <div class="column">
+                          <img class="demo cursor" src="../images/Headerbild.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+                        </div>
+                        <div class="column">
+                          <img class="demo cursor" src="../images/XT206459.jpg" style="width:100%" onclick="currentSlide(4)" alt="Northern Lights">
+                        </div>--->
+                                <!--End-->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="workplace">
+                        <div style="width:100%;background-image:url(../images/workplace/setup01.jpg);background-repeat: no-repeat;background-position: center center;background-size: 100%;height: 350px;" onclick="openModal('myWorkplaceModal', 'myWorkplaceSlides');currentSlide(1)"
+                            class="hover-shadow cursor"></div>
+                        <h1><span>workplace</span><br>OCT | '19<br></h1>
+                        <div id="myWorkplaceModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myWorkplaceModal')">&times;</span>
+                            <div id="myWorkplaceSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/workplace/setup01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/workplace/setup02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/workplace/setup03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/workplace/setup04.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/workplace/setup05.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/workplace/setup06.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="koenigssee">
+                        <div style="width:100%;background-image:url(../images/Chiemsee-Koenigssee/koenigssee01.jpg);background-repeat: no-repeat;background-position: center center;background-size: 100%;height: 350px;" onclick="openModal('myKoenigsseeModal', 'myKoenigsseeSlides');currentSlide(1)"
+                            class="hover-shadow cursor"></div>
+                        <h1><span>Chiemsee-Königssee</span><br>AUG | '19<br></h1>
+                        <div id="myKoenigsseeModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myKoenigsseeModal')">&times;</span>
+                            <div id="myKoenigsseeSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/Chiemsee-Koenigssee/koenigssee01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Chiemsee-Koenigssee/koenigssee02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Chiemsee-Koenigssee/koenigssee03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Chiemsee-Koenigssee/koenigssee04.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Chiemsee-Koenigssee/chiemsee01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Chiemsee-Koenigssee/chiemsee02.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="mannheim">
+                        <div style="width:100%;background-image:url(../images/mannheim/mannheim01.jpg);background-repeat: no-repeat;background-position: center center;background-size: 100%;height: 350px;" onclick="openModal('myMannheimModal', 'myMannheimSlides');currentSlide(1)"
+                            class="hover-shadow cursor"></div>
+                        <h1><span>Mannheim</span><br>JUN | '19<br></h1>
+                        <div id="myMannheimModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myMannheimModal')">&times;</span>
+                            <div id="myMannheimSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/Mannheim/mannheim01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Mannheim/mannheim02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Mannheim/mannheim03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/Mannheim/mannheim04.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="heidelberg">
+                        <div style="width:100%;background-image:url(../images/heidelberg/heidelberg01.jpg);background-repeat: no-repeat;background-position: center center;background-size: 100%;height: 350px;" onclick="openModal('myHeidelbergModal', 'myHeidelbergSlides');currentSlide(1)"
+                            class="hover-shadow cursor"></div>
+                        <h1><span>Heidelberg</span><br>APR | '19<br></h1>
+                        <div id="myHeidelbergModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myHeidelbergModal')">&times;</span>
+                            <div id="myHeidelbergSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/heidelberg/heidelberg01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/heidelberg/heidelberg02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/heidelberg/heidelberg03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/heidelberg/heidelberg04.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="barcelona">
+                        <div style="width:100%;background-image:url(../images/barcelona/barcelona04.jpg);background-repeat: no-repeat;background-position: center center;background-size: 100%;height: 350px;" onclick="openModal('myBarcelonaModal', 'myBarcelonaSlides');currentSlide(1)"
+                            class="hover-shadow cursor"></div>
+                        <h1><span>Barcelona</span><br>MAR | '19<br></h1>
+                        <div id="myBarcelonaModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myBarcelonaModal')">&times;</span>
+                            <div id="myBarcelonaSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/barcelona/barcelona04.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona05.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona06.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona07.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona08.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona09.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona10.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona11.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona12.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona13.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona14.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/barcelona/barcelona15.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="muenster">
+                        <div style="width:100%;background-image:url(../images/muenster/meunster01.jpg);background-repeat: no-repeat;background-position: center center;background-size: 100%;height: 350px;" onclick="openModal('myMuensterModal', 'myMuensterSlides');currentSlide(1)"
+                            class="hover-shadow cursor"></div>
+                        <h1><span>Münster</span><br>AUG | '18<br></h1>
+                        <div id="myMuensterModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myMuensterModal')">&times;</span>
+                            <div id="myMuensterSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/muenster/meunster01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/muenster/meunster03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/muenster/meunster02.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="bulgaria">
+                        <img src="../images/bulgarien/bulgarien05.jpg" style="width:100%" onclick="openModal('myBulgariaModal', 'myBulgariaSlides');currentSlide(1)" class="hover-shadow cursor">
+                        <h1><span>Bulgaria</span><br>MAY | '18<br></h1>
+                        <div id="myBulgariaModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myBulgariaModal')">&times;</span>
+                            <div id="myBulgariaSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/bulgarien/bulgarien05.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/bulgarien/bulgarien01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/bulgarien/bulgarien02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/bulgarien/bulgarien03.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/bulgarien/bulgarien04.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column" id="aalen">
+                        <img src="../images/aalen/aalen01.jpg" style="width:100%" onclick="openModal('myAalenModal', 'myAalenSlides');currentSlide(1)" class="hover-shadow cursor">
+                        <h1><span>Aalen</span><br>APR | '18<br></h1>
+                        <div id="myAalenModal" class="modal">
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                            <span class="close cursor" onclick="closeModal('myAalenModal')">&times;</span>
+                            <div id="myAalenSlides" class="modal-content">
+                                <div class="mySlides"><img src="../images/aalen/aalen01.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/aalen/aalen02.jpg" style="width:100%"></div>
+                                <div class="mySlides"><img src="../images/aalen/aalen03.jpg" style="width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </section>
+        <footer id="footer">
+            <div class="contentbereich">
+                <div id="logo_footer">
+                </div>
+                <div id="footer_social">
+                    <div id="facebook">
+                        <a href="https://www.facebook.com/gallographic" target="_blank"></a>
+                    </div>
+                    <div id="instagram">
+                        <a href="https://www.instagram.com/gallographic" target="_blank"></a>
+                    </div>
+                    <div id="dribble">
+                        <a href="https://dribbble.com/gallographic" target="_blank"></a>
+                    </div>
+                    <div id="behance">
+                        <a href="https://www.behance.net/stefangall" target="_blank"></a>
+                    </div>
+                </div>
+                <div id="footer_law">
+                    <ul>
+                        <a>
+                            <li>Impressum</li>
+                        </a>
+                        <a>
+                            <li>Datenschutzerklärung</li>
+                        </a>
+                        <a>
+                            <li></li>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        </div>
+</body>
+
+</html>.row { padding-bottom: 100px; }
