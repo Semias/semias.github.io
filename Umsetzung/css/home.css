@@ -627,11 +627,8 @@ a {
 
 .policy__info {
   transform: scale(0);
-  pointer-events: none;
   transition: 0.8s;
   transform-origin: top;
-  scroll-behavior: smooth;
-  z-index: 999;
 }
 
 .policy__info_close {
@@ -674,11 +671,11 @@ a {
   width: calc(100% - 60px);
   height: 1500px;
   padding: 30px;
-  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  z-index: 999;
 }
 
 .policy__info_content {

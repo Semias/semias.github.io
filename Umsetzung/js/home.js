@@ -26,8 +26,8 @@ jQuery(document).ready(function ($) {
       $(".policy__info").addClass("open");
     });
 
-    $(".footer__policy_close").click(function () {
-      $(".policy__info").removeClass("open");
+    $(".policy__info_close").click(function () {
+      $(".policy__info.open").removeClass("open");
     });
 
     //Animation und hinscrollen
@@ -46,7 +46,7 @@ jQuery(document).ready(function ($) {
           {
             scrollTop: $(".policy__info.open").offset().top,
           },
-          "medium"
+          "slow"
         );
       });
     }, 3000);
