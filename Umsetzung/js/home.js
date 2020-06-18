@@ -13,10 +13,7 @@ jQuery(document).ready(function ($) {
 
     $(function () {
       $(".footer__logo svg").click(function () {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
+        $("html,body").animate({ scrollTop: 0 }, "slow");
       });
     });
 
@@ -30,25 +27,16 @@ jQuery(document).ready(function ($) {
       $(".policy__info.open").removeClass("open");
     });
 
-    //Animation und hinscrollen
+    //footer animate to section with delay
 
-    $(".footer__policy ul li").click(function () {
-      $("html,body").animate(
-        {
-          scrollTop: $(".policy__info.open").offset().top,
-        },
-        "slow"
-      );
-    });
-    setTimeout(function () {
+    $(function () {
       $(".footer__policy ul li").click(function () {
-        $("html,body").animate(
-          {
-            scrollTop: $(".policy__info.open").offset().top,
-          },
-          "slow"
-        );
+        setTimeout(function () {
+          $("html, body").animate({
+            scrollTop: $(window).scrollTop() + 900,
+          });
+        }, 200);
       });
-    }, 3000);
+    });
   });
 });
