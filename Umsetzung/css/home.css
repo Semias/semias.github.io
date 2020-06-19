@@ -619,8 +619,44 @@ a {
   scroll-behavior: smooth;
 }
 
+.footer__policy ul li::after {
+  content: "";
+  position: absolute;
+  top: 4660px;
+  right: 350px;
+  width: 100px;
+  transform: scale(0);
+  transform-origin: left;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.footer__policy ul li:hover::after {
+  content: "";
+  position: absolute;
+  transform: scale(1);
+  top: 4660px;
+  right: 350px;
+  width: 100px;
+  border-bottom: 1px solid #fff;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 .footer__policy ul li:hover {
   cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .policy__info {

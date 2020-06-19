@@ -78,10 +78,6 @@ a {
 /*############HEADER############*/
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0em;
-  z-index: 9;
   width: 100%;
   display: flex;
   align-items: center;
@@ -136,7 +132,7 @@ a {
   transition: transform 300ms ease-in-out;
   position: absolute;
   top: 140px;
-  right: 429px;
+  right: 432px;
 }
 
 #header__menu ul li:nth-child(3) a::after {
@@ -165,7 +161,11 @@ a {
   transform: translate(0, -20%);
 }
 
-/*############SECTION01-BEGIN############*/
+/*############SECTION__ABOUT-BEGIN############*/
+
+.section__about {
+  padding: 100px 0;
+}
 
 /*############FOOTER-BEGIN############*/
 .footer {

@@ -78,10 +78,6 @@ a {
 /*############HEADER############*/
 
 .header {
-  position: absolute;
-  top: 0;
-  left: 0em;
-  z-index: 9;
   width: 100%;
   display: flex;
   align-items: center;
@@ -165,7 +161,11 @@ a {
   transform: translate(0, -20%);
 }
 
-/*############SECTION01-BEGIN############*/
+/*############SECTION__GALLERY-BEGIN############*/
+
+.section__gallery {
+  padding: 100px 0;
+}
 
 /*############FOOTER-BEGIN############*/
 .footer {
