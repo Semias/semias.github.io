@@ -25,7 +25,9 @@ function currentSlide(index) {
 
 function showSlides(index) {
     var i;
-    if (index > mySlides.childElementCount) { slideIndex = 1 } //diese Zeile springt zum ersten Bild zurück (Karusell)
+    if (index > mySlides.childElementCount) {
+        slideIndex = 1
+    } //diese Zeile springt zum ersten Bild zurück (Karusell)
     for (i = 0; i < mySlides.childElementCount; i++) { //Setzt durch die Schleife die Bilder auf 'display:none'
         mySlides.children[i].style.display = "none";
     }

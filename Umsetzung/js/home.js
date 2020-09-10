@@ -1,19 +1,14 @@
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
   $(document).ready(function () {
-    /*Burger Menue Click Function-Begin*/
-
-    $("#menue").click(function () {
-      $(this).toggleClass("act");
-      $("#menue_open").toggleClass("act");
-      $(".main-wrap").toggleClass("act");
-    });
 
     /*Burger Menue Click Function-End*/
 
     $(function () {
       $(".footer__logo svg").click(function () {
-        $("html,body").animate({ scrollTop: 0 }, "slow");
+        $("html,body").animate({
+          scrollTop: 0
+        }, "slow");
       });
     });
 
@@ -39,4 +34,11 @@ jQuery(document).ready(function ($) {
       });
     });
   });
+});
+
+
+let resp = document.querySelector(".responsive__menu");
+
+resp.addEventListener("click", function () {
+  resp.classList.toggle("active");
 });
