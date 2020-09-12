@@ -42,3 +42,20 @@ let resp = document.querySelector(".responsive__menu");
 resp.addEventListener("click", function () {
   resp.classList.toggle("active");
 });
+
+
+
+let datenschutz = document.querySelectorAll {
+  '.footer__policy ul li'
+};
+let info = document.querySelectorAll {
+  '.policy__info'
+};
+
+datenschutz.addEventListener("click", function () {
+  datenschutz.classList.add('open')
+});
+
+datenschutz.addEventListener("click", function () {
+  datenschutz.classList.add('open')
+});
