@@ -655,6 +655,11 @@ a {
   font-size: 1.3em;
   position: relative;
   scroll-behavior: smooth;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .footer__policy ul li::after {
@@ -705,7 +710,7 @@ a {
   z-index: 999;
   transform: translateY(-1600px);
   opacity: 0;
-  pointer-events: all;
+  pointer-events: none;
 }
 
 .policy__info.open {
