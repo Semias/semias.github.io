@@ -60,6 +60,12 @@ body::-webkit-scrollbar-thumb {
   --grey: #202020;
 }
 
+h1 {
+  font-family: "Oswald-SemiBold";
+  font-size: 1.8em;
+  text-transform: uppercase;
+}
+
 .contentbereich {
   width: 100%;
   max-width: 1920px;
@@ -215,7 +221,8 @@ a {
 #header__menu ul li:nth-child(1) a::after {
   content: "";
   width: 110px;
-  border-bottom: solid 1px #fff;
+  height: 0.5px;
+  background: #fff;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
@@ -226,7 +233,8 @@ a {
 #header__menu ul li:nth-child(2) a::after {
   content: "";
   width: 50px;
-  border-bottom: solid 1px #fff;
+  height: 0.5px;
+  background: #fff;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
@@ -237,7 +245,8 @@ a {
 #header__menu ul li:nth-child(3) a::after {
   content: "";
   width: 80px;
-  border-bottom: solid 1px #fff;
+  height: 0.5px;
+  background: #fff;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
@@ -247,7 +256,6 @@ a {
 
 #header__menu ul li a:hover::after {
   content: "";
-  border-bottom: solid 1px #fff;
   transform: scaleX(1);
   transition: transform 300ms ease-in-out;
 }
@@ -266,6 +274,7 @@ a {
   grid-area: section01;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .quote p {
@@ -275,6 +284,24 @@ a {
   font-family: "Oswald-Light";
   text-transform: uppercase;
 }
+
+/* .quote p::before {
+  color: #fff;
+  content: '"';
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 2em;
+}
+
+.quote p::after {
+  color: #fff;
+  content: '"';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 2em;
+} */
 
 /*############SECTION02-BEGIN############*/
 
@@ -304,23 +331,28 @@ a {
 
 .photography__teaser_pictures ul li:hover {
   filter: grayscale(0);
-  transition: 0.8s;
-  transform-origin: 0 0;
+  transition: 1s;
+  background-size: 750% !important;
 }
 
-.photography__teaser_pictures ul li img {
-  width: 1270px;
-  transform: translate(-44%, 0px);
+#teaser_1 {
+  background: url(/images/autumm/autumm07.jpg) center center no-repeat;
+  background-size: 700%;
 }
 
-.photography__teaser_pictures ul li:nth-child(2) img {
-  width: 1270px;
-  transform: translate(-36%, 0px);
+#teaser_2 {
+  background: url(/images/aalen/aalen01.jpg) center center no-repeat;
+  background-size: 700%;
 }
 
-.photography__teaser_pictures ul li:nth-child(4) img {
-  width: 1270px;
-  transform: translate(-27%, 0px);
+#teaser_3 {
+  background: url(/images/barcelona/barcelona04.jpg) center center no-repeat;
+  background-size: 700%;
+}
+
+#teaser_4 {
+  background: url(/images/Mannheim/mannheim01.jpg) center center no-repeat;
+  background-size: 700%;
 }
 
 .photography__teaser_text {
@@ -371,7 +403,7 @@ a {
   background-size: 200% 100%;
   background-position: right bottom;
   border: 1px solid #fff;
-  transition: all ease 0.4s;
+  transition: all ease 0.5s;
   width: 100%;
   height: 100%;
   font-size: 1.8em;
@@ -411,7 +443,7 @@ a {
   transition: 0.8s;
 }
 
-.design__teaser_pictures ul li:hover {
+/* .design__teaser_pictures ul li:hover {
   filter: grayscale(0);
   transition: 0.8s;
 }
@@ -429,6 +461,37 @@ a {
 .design__teaser_pictures ul li:nth-child(3) img {
   width: 1200px;
   transform: translate(-34%, 0px);
+} */
+
+.design__teaser_pictures ul li:hover {
+  filter: grayscale(0);
+  transition: 1s;
+}
+
+#design__teaser_1 {
+  background: url(/images/design/borninashe.jpg) center center no-repeat;
+  background-size: 340%;
+}
+#design__teaser_1:hover {
+  background-size: 390%;
+}
+
+#design__teaser_2 {
+  background: url(/images/design/covid19.jpg) center center no-repeat;
+  background-size: 240%;
+}
+
+#design__teaser_2:hover {
+  background-size: 290%;
+}
+
+#design__teaser_3 {
+  background: url(/images/design/calendar.jpg) center center no-repeat;
+  background-size: 470%;
+}
+
+#design__teaser_3:hover {
+  background-size: 520%;
 }
 
 .design__teaser_text {
@@ -518,7 +581,7 @@ a {
 }
 
 .about__teaser_text--button a {
-  padding: 15px 60px;
+  padding: 15px 59px;
   text-transform: uppercase;
   background: linear-gradient(to left, rgb(255 255 255 / 0%) 50%, #fff 50%);
   background-size: 200% 100%;
@@ -655,11 +718,7 @@ a {
   font-size: 1.3em;
   position: relative;
   scroll-behavior: smooth;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .footer__policy ul li::after {
@@ -667,39 +726,19 @@ a {
   position: absolute;
   top: 35px;
   left: 0px;
-  width: 100%;
-  transform: scale(0);
-  transform-origin: left;
-  border-bottom: 1px solid #fff;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  width: 0;
+  height: 0.5px;
+  background: #fff;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .footer__policy ul li:hover::after {
   content: "";
-  position: absolute;
-  transform: scale(1);
-  top: 35px;
-  left: 0px;
   width: 100%;
-  border-bottom: 1px solid #fff;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.footer__policy ul li:hover {
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -ms-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
 .policy__info {
