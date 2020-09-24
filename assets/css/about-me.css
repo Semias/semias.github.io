@@ -1,28 +1,28 @@
 @charset "utf-8";
 @font-face {
   font-family: "Oswald-Light";
-  src: url("../../schriften/Oswald-ExtraLight.ttf");
+  src: url("../fonts/Oswald-ExtraLight.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Oswald-Regular";
-  src: url("../../schriften/Oswald-Regular.ttf");
+  src: url("../fonts/Oswald-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Oswald-SemiBold";
-  src: url("../../schriften/Oswald-SemiBold.ttf");
+  src: url("../fonts/Oswald-SemiBold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Jaldi-Regular";
-  src: url("../../schriften/Jaldi-Regular.ttf");
+  src: url("../fonts/Jaldi-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -254,7 +254,7 @@ a {
   width: 440px;
   position: relative;
   height: 440px;
-  background: url(/images/about-me.jpg) no-repeat center center;
+  background: url(../img/about-me.jpg) no-repeat center center;
   border-radius: 50%;
   background-size: cover;
 }

@@ -10,20 +10,22 @@
 
     <link
       rel="shortcut icon"
-      href="../images/favicon.ico"
+      href="assets/img/favicon.ico"
       type="image/x-icon"
     />
-    <link rel="icon" href="../images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon" />
 
-    <link rel="stylesheet" href="css/jquery.bxslider.css" />
-    <script type="text/javascript" src="js/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery.bxslider.min.js"></script>
-    <script type="text/javascript" src="js/bx.slider.js"></script>
+    <link rel="stylesheet" href="assets/css/jquery.bxslider.css" />
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/jquery.bxslider.min.js"></script>
+    <script type="text/javascript" src="assets/js/bx.slider.js"></script>
 
-    <link type="text/css" href="css/home.css" rel="stylesheet" />
-    <link type="text/css" href="css/responsive.css" rel="stylesheet" />
-    <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/home.js"></script>
+    <link type="text/css" href="assets/css/home.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/aos.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/responsive.css" rel="stylesheet" />
+    <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="assets/js/home.js"></script>
+    <script type="text/javascript" src="assets/js/aos.js"></script>
 
 
     <!-- <script
@@ -108,25 +110,25 @@
       </div>
     </header>
 
-    <figure id="headerImage">
+    <figure id="headerImage" data-aos="fade-down">
       <ul class="slider">
         <li>
           <img
-            src="../images/header/Headerbild01.jpg"
+            src="assets/img/header/Headerbild01.jpg"
             title="CasaMila"
             alt="Headerbild"
           />
         </li>
         <li>
           <img
-            src="../images/header/Headerbild02.jpg"
+            src="assets/img/header/Headerbild02.jpg"
             title="Heidelberg"
             alt="Headerbild"
           />
         </li>
         <li>
           <img
-            src="../images/header/Headerbild03.jpg"
+            src="assets/img/header/Headerbild03.jpg"
             title="Laub"
             alt="Headerbild"
           />
@@ -149,7 +151,7 @@
 
     <section class="photography">
       <div class="contentbereich">
-        <div class="photography__teaser_pictures">
+        <div class="photography__teaser_pictures" data-aos="fade-right">
           <ul>
             <li id="teaser_1"></li>
             <li id="teaser_2"></li>
@@ -174,7 +176,7 @@
     </section>
     <section class="design">
       <div class="contentbereich">
-        <div class="design__teaser_text">
+        <div class="design__teaser_text" >
           <h1>Design</h1>
           <p>
             Occassionally I will upload some Design made by myself. As a media
@@ -409,5 +411,11 @@
         </div>
       </div>
     </section>
+    <script>
+      AOS.init({
+        duration: 1200,
+      })
+      AOS.refresh();
+    </script>
   </body>
 </html>

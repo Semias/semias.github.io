@@ -2,28 +2,28 @@
 
 @font-face {
   font-family: "Oswald-Light";
-  src: url("../../schriften/Oswald-ExtraLight.ttf");
+  src: url("../fonts//Oswald-ExtraLight.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Oswald-Regular";
-  src: url("../../schriften/Oswald-Regular.ttf");
+  src: url("../fonts//Oswald-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Oswald-SemiBold";
-  src: url("../../schriften/Oswald-SemiBold.ttf");
+  src: url("../fonts//Oswald-SemiBold.ttf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Jaldi-Regular";
-  src: url("../../schriften/Jaldi-Regular.ttf");
+  src: url("../fonts/Jaldi-Regular.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -336,22 +336,22 @@ a {
 }
 
 #teaser_1 {
-  background: url(/images/autumm/autumm07.jpg) center center no-repeat;
+  background: url(../img/autumm/autumm07.jpg) center center no-repeat;
   background-size: 700%;
 }
 
 #teaser_2 {
-  background: url(/images/aalen/aalen01.jpg) center center no-repeat;
+  background: url(../img/aalen/aalen01.jpg) center center no-repeat;
   background-size: 700%;
 }
 
 #teaser_3 {
-  background: url(/images/barcelona/barcelona04.jpg) center center no-repeat;
+  background: url(../img/barcelona/barcelona04.jpg) center center no-repeat;
   background-size: 700%;
 }
 
 #teaser_4 {
-  background: url(/images/Mannheim/mannheim01.jpg) center center no-repeat;
+  background: url(../img/Mannheim/mannheim01.jpg) center center no-repeat;
   background-size: 700%;
 }
 
@@ -469,7 +469,7 @@ a {
 }
 
 #design__teaser_1 {
-  background: url(/images/design/borninashe.jpg) center center no-repeat;
+  background: url(../img/design/borninashe.jpg) center center no-repeat;
   background-size: 340%;
 }
 #design__teaser_1:hover {
@@ -477,7 +477,7 @@ a {
 }
 
 #design__teaser_2 {
-  background: url(/images/design/covid19.jpg) center center no-repeat;
+  background: url(../img/design/covid19.jpg) center center no-repeat;
   background-size: 240%;
 }
 
@@ -486,7 +486,7 @@ a {
 }
 
 #design__teaser_3 {
-  background: url(/images/design/calendar.jpg) center center no-repeat;
+  background: url(../img/design/calendar.jpg) center center no-repeat;
   background-size: 470%;
 }
 

@@ -6,7 +6,7 @@ $(document).ready(function () {
     slideWidth: 1920,
     auto: true,
     autoDirection: "next",
-    autoDelay: 3000,
-    pause: 10000,
+    autoDelay: 4000,
+    pause: 4000,
   });
 });
