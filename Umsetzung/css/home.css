@@ -40,7 +40,7 @@ body {
   position: relative;
   grid-template:
     "headerImage"
-    "section01"585px "section02"1030px "section03"1030px "section04"890px "footer"250px;
+    "section01" 585px "section02" 1030px "section03" 1030px "section04" 890px "footer" 250px;
   background: var(--grey);
 }
 
@@ -62,8 +62,21 @@ body::-webkit-scrollbar-thumb {
 
 .contentbereich {
   width: 100%;
-  max-width: 1550px;
+  max-width: 1920px;
+  display: flex;
   margin: 0 auto;
+}
+
+.quote .contentbereich {
+  justify-content: center;
+}
+
+.policy__info.open .contentbereich {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 a {
@@ -100,7 +113,7 @@ a {
 }
 
 .responsive__menu ul li::after {
-  content: '';
+  content: "";
   width: 40px;
   height: 2px;
   top: 10px;
@@ -112,7 +125,7 @@ a {
 }
 
 .responsive__menu ul li::before {
-  content: '';
+  content: "";
   top: -10px;
   left: 0;
   width: 40px;
@@ -162,15 +175,18 @@ a {
   top: 0;
   left: 0;
   z-index: -1;
-  background: linear-gradient(to top,
-      rgba(128, 128, 128, 0),
-      rgba(0, 0, 0, 0.5) 60%);
+  background: linear-gradient(
+    to top,
+    rgba(128, 128, 128, 0),
+    rgba(0, 0, 0, 0.5) 60%
+  );
 }
 
 .header .contentbereich {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 1550px;
 }
 
 .header__logo svg {
@@ -355,7 +371,7 @@ a {
   background-size: 200% 100%;
   background-position: right bottom;
   border: 1px solid #fff;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
   width: 100%;
   height: 100%;
   font-size: 1.8em;
@@ -508,12 +524,11 @@ a {
   background-size: 200% 100%;
   background-position: right bottom;
   border: 1px solid #fff;
-  transition: all ease .4s;
+  transition: all ease 0.4s;
   width: 100%;
   height: 100%;
   font-size: 1.8em;
 }
-
 
 .about__teaser_text--button a:hover {
   color: #000000;
@@ -563,12 +578,14 @@ a {
 .footer__social .instagram:hover {
   transition: 0.3s;
   border-radius: 50%;
-  background: linear-gradient(45deg,
-      #f09433 0%,
-      #e6683c 25%,
-      #dc2743 50%,
-      #cc2366 75%,
-      #bc1888 100%);
+  background: linear-gradient(
+    45deg,
+    #f09433 0%,
+    #e6683c 25%,
+    #dc2743 50%,
+    #cc2366 75%,
+    #bc1888 100%
+  );
 }
 
 .footer__social .dribbble:hover {
