@@ -38,9 +38,15 @@ body {
   display: grid;
   grid-template:
     "header"
-    "section"
+    "section" 1000px
     "footer" 250px;
   background: var(--grey);
+}
+
+h1 {
+  font-family: "Oswald-SemiBold";
+  font-size: 1.8em;
+  text-transform: uppercase;
 }
 
 body::-webkit-scrollbar {
@@ -183,7 +189,8 @@ a {
 #header__menu ul li:nth-child(1) a::after {
   content: "";
   width: 110px;
-  border-bottom: solid 1px #fff;
+  height: 0.5px;
+  background: #fff;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
@@ -194,7 +201,8 @@ a {
 #header__menu ul li:nth-child(2) a::after {
   content: "";
   width: 50px;
-  border-bottom: solid 1px #fff;
+  height: 0.5px;
+  background: #fff;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
@@ -205,7 +213,8 @@ a {
 #header__menu ul li:nth-child(3) a::after {
   content: "";
   width: 80px;
-  border-bottom: solid 1px #fff;
+  height: 0.5px;
+  background: #fff;
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
@@ -215,7 +224,6 @@ a {
 
 #header__menu ul li a:hover::after {
   content: "";
-  border-bottom: solid 1px #fff;
   transform: scaleX(1);
   transition: transform 300ms ease-in-out;
 }
@@ -232,6 +240,37 @@ a {
 
 .section__about {
   padding: 100px 0;
+}
+
+.section__about .contentbereich {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column wrap;
+  align-items: center;
+  height: 80%;
+}
+
+.section__about_pic {
+  width: 440px;
+  position: relative;
+  height: 440px;
+  background: url(/images/about-me.jpg) no-repeat center center;
+  border-radius: 50%;
+  background-size: cover;
+}
+
+.section__about_text {
+  width: 50%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: #fff;
+  flex-direction: column;
+  text-align: center;
+}
+
+.section__about_text p {
+  font-family: "Jaldi-Regular";
 }
 
 /*############FOOTER-BEGIN############*/
@@ -349,11 +388,29 @@ a {
   list-style: none;
   color: #fff;
   font-size: 1.3em;
+  position: relative;
   scroll-behavior: smooth;
+  cursor: pointer;
 }
 
-.footer__policy ul li:hover {
-  cursor: pointer;
+.footer__policy ul li::after {
+  content: "";
+  position: absolute;
+  top: 35px;
+  left: 0px;
+  width: 0;
+  height: 0.5px;
+  background: #fff;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.footer__policy ul li:hover::after {
+  content: "";
+  width: 100%;
 }
 
 .policy__info {
