@@ -48,7 +48,7 @@ jQuery(document).ready(function ($) {
     /*Burger Menue Click Function-End*/
 
     $(function () {
-      $(".footer__logo svg").click(function () {
+      $(".footer__logo img").click(function () {
         $("html,body").animate(
           {
             scrollTop: 0,
