@@ -17,14 +17,16 @@
 
     <link type="text/css" href="assets/css/about-me.css" rel="stylesheet" />
     <link type="text/css" href="assets/css/responsive.css" rel="stylesheet" />
+    <link type="text/css" href="assets/css/aos.css" rel="stylesheet" />
     <script type="text/javascript" src="assets/js/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="assets/js/home.js"></script>
+    <script type="text/javascript" src="assets/js/aos.js"></script>
   </head>
 
   <body>
     <header class="header">
       <div class="contentbereich">
-        <div class="header__logo">
+        <div class="header__logo" data-aos="fade-right" data-aos-delay="400">
           <a href="home.html">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -94,15 +96,21 @@
         </div>
         <nav id="header__menu">
           <ul>
-            <li><a href="photography.html">Photography</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="about-me.html">About me</a></li>
+            <li data-aos="fade-left" data-aos-delay="100">
+              <a href="photography.html">Photography</a>
+            </li>
+            <li data-aos="fade-left" data-aos-delay="200">
+              <a href="design.html">Design</a>
+            </li>
+            <li data-aos="fade-left" data-aos-delay="300">
+              <a href="about-me.html">About me</a>
+            </li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <section class="section__about">
+    <section class="section__about" data-aos="fade-down" data-aos-delay="400">
       <div class="contentbereich">
         <div class="section__about_pic"></div>
         <div class="section__about_text">
@@ -314,5 +322,8 @@
         </div>
       </div>
     </section>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

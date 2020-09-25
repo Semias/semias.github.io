@@ -37,7 +37,7 @@
   <body>
     <header class="header">
       <div class="contentbereich">
-        <div class="header__logo">
+        <div class="header__logo" data-aos="fade-right" data-aos-delay="400">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1149.59 414.71">
             <g id="Logo">
               <path
@@ -102,15 +102,15 @@
         </div>
         <nav id="header__menu">
           <ul>
-            <li><a href="photography.html">Photography</a></li>
-            <li><a href="design.html">Design</a></li>
-            <li><a href="about-me.html">About me</a></li>
+            <li data-aos="fade-left" data-aos-delay="100"><a href="photography.html">Photography</a></li>
+            <li data-aos="fade-left" data-aos-delay="200"><a href="design.html">Design</a></li>
+            <li data-aos="fade-left" data-aos-delay="300"><a href="about-me.html">About me</a></li>
           </ul>
         </nav>
       </div>
     </header>
 
-    <figure id="headerImage" data-aos="fade-down">
+    <figure id="headerImage">
       <ul class="slider">
         <li>
           <img
@@ -159,7 +159,7 @@
             <li id="teaser_4"></li>
           </ul>
         </div>
-        <div class="photography__teaser_text">
+        <div class="photography__teaser_text" data-aos="fade-left">
           <h1>Photography</h1>
           <p>
             Here I want to Show you my photo's that I made during trips and
@@ -176,7 +176,7 @@
     </section>
     <section class="design">
       <div class="contentbereich">
-        <div class="design__teaser_text" >
+        <div class="design__teaser_text" data-aos="fade-right">
           <h1>Design</h1>
           <p>
             Occassionally I will upload some Design made by myself. As a media
@@ -190,7 +190,7 @@
           </div>
         </div>
 
-        <div class="design__teaser_pictures">
+        <div class="design__teaser_pictures" data-aos="fade-left">
           <ul>
             <li id="design__teaser_1"></li>
             <li id="design__teaser_2"></li>
@@ -199,7 +199,7 @@
         </div>
       </div>
     </section>
-    <section class="about">
+    <section class="about" data-aos="fade-down">
       <div class="contentbereich">
         <div class="about__teaser_text">
           <h1>About me</h1>
@@ -412,10 +412,7 @@
       </div>
     </section>
     <script>
-      AOS.init({
-        duration: 1200,
-      })
-      AOS.refresh();
+      AOS.init();
     </script>
   </body>
 </html>

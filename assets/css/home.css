@@ -39,7 +39,7 @@ body {
   display: grid;
   position: relative;
   grid-template:
-    "headerImage"
+    "headerImage" 100vh
     "section01" 585px "section02" 1030px "section03" 1030px "section04" 890px "footer" 250px;
   background: var(--grey);
 }
@@ -71,6 +71,7 @@ h1 {
   max-width: 1920px;
   display: flex;
   margin: 0 auto;
+  overflow: hidden;
 }
 
 .quote .contentbereich {
