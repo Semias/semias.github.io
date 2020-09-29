@@ -277,6 +277,26 @@ a {
   padding: 100px 0;
 }
 
+.gallery {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+.gallery__element {
+  width: 33%;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gallery__element_teaser {
+  wid
+}
+
 /*############FOOTER-BEGIN############*/
 .footer {
   grid-area: footer;
