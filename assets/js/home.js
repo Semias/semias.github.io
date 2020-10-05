@@ -2,9 +2,15 @@ window.addEventListener(
   "load",
   function () {
     let resp = document.querySelector(".responsive__menu");
+    let respChilds = document.querySelector("#header__menu");
+
 
     resp.addEventListener("click", function () {
       resp.classList.toggle("active");
+    });
+
+    resp.addEventListener("click", function () {
+      respChilds.classList.toggle("active");
     });
 
     /*let datenschutz = document.querySelector(".footer__policy ul li");

@@ -44,7 +44,6 @@
 [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "icomoon" !important;
-  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -125,6 +124,7 @@ a {
   width: 40px;
   height: 25px;
   cursor: pointer;
+  z-index: 999;
   transition: 0.3s;
 }
 
