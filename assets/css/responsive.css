@@ -77,32 +77,3 @@
 
   /*ABOUT ME*/
 }
-
-/*Mobile Devices*/
-@media (max-width: 767px) {
-  #header__menu {
-    transform: translateX(100vw);
-    transition: transform 0.3s;
-    position: absolute;
-    height: 100vh;
-    top: 0;
-    right: 0;
-    background: var(--grey);
-  }
-
-  #header__menu.active {
-    transform: translateX(0);
-  }
-  #header__menu ul {
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-around;
-  }
-  .responsive__menu {
-    display: block;
-  }
-
-  .header .contentbereich {
-    width: 90%;
-  }
-}
