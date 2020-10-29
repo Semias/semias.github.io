@@ -1,5 +1,7 @@
 @charset "utf-8";
 
+/* Fonts */
+
 @font-face {
   font-family: "Oswald-Light";
   src: url("../fonts//Oswald-ExtraLight.ttf");
@@ -70,6 +72,26 @@
   content: "\e905";
 }
 
+/* Scroll bar */
+
+body::-webkit-scrollbar {
+  width: 3px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--grey);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+/* base styles */
+
+:root {
+  --grey: #202020;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -84,22 +106,7 @@ body {
     "headerImage" 100vh
     "section01" 585px "section02" 1030px "section03" 1030px "section04" 890px "footer" 250px;
   background: var(--grey);
-}
-
-body::-webkit-scrollbar {
-  width: 3px;
-}
-
-body::-webkit-scrollbar-track {
-  background: var(--grey);
-}
-
-body::-webkit-scrollbar-thumb {
-  background-color: #fff;
-}
-
-:root {
-  --grey: #202020;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -114,10 +121,6 @@ h1 {
   display: flex;
   margin: 0 auto;
   overflow: hidden;
-}
-
-.quote .contentbereich {
-  justify-content: center;
 }
 
 .policy__info.open .contentbereich {
@@ -209,7 +212,7 @@ a {
 .header {
   position: absolute;
   top: 0;
-  left: 0em;
+  left: 0;
   z-index: 9;
   width: 100%;
   display: flex;
@@ -843,8 +846,8 @@ a {
   height: auto;
 }
 
-/*Mobile Devices*/
-@media (max-width: 767px) {
+/* small tablet styles 
+@media screen and (min-width: 620px) {
   #header__menu {
     transform: translateX(100vw);
     transition: transform 0.3s;
@@ -875,3 +878,11 @@ a {
     max-width: 720px;
   }
 }
+
+/* large tablet and laptop styles
+@media screen and (min-width: 960px) {
+}*/
+
+/* desktop styles 
+@media screen and (min-width: 1200px) {
+}*/
