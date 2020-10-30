@@ -114,16 +114,10 @@ body {
   margin: 0;
 } */
 
-h1 {
-  font-family: "Oswald-SemiBold";
-  font-size: 1.375em;
-  text-transform: uppercase;
-  color: #fff;
-}
-
 ul,
 li {
   list-style: none;
+  margin: 0;
 }
 
 p, h1, h2, h3, h4, h5{
@@ -139,6 +133,14 @@ a {
 .grid {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
+}
+
+h1 {
+  font-family: "Oswald-SemiBold";
+  font-size: 1.375em;
+  text-transform: uppercase;
+  color: #fff;
+  margin-bottom: 2em;
 }
 
 /*############RESP_MENU############*/
@@ -239,8 +241,10 @@ a {
 }
 
 .header__logo {
-  width: 150px;
+  width: 100%;
+  margin: 20px 0;
   grid-column: 2;
+  min-width: 130px;
 }
 
 .header__logo img {
@@ -250,7 +254,7 @@ a {
 /* Desktop Menu */
 
 .menu {
-  position: absolute;
+    position: absolute;
     right: 0em;
     top: 0;
     transition: opacity 0.3s;
@@ -261,7 +265,7 @@ a {
     width: 100%;
     align-items: center;
     opacity: 0;
-    background: rgb(0 0 0 / 0.7);
+    background: rgb(0 0 0 / 0.8);
     backdrop-filter: blur(10px);
     pointer-events: none;
 }
@@ -272,13 +276,13 @@ a {
   pointer-events: all;
 }
 
-.menu ul li a {
+.menu li a {
   font-size: 1.8em;
   text-transform: uppercase;
   position: relative;
 }
 
-.menu ul li:nth-child(1) a::after {
+.menu li:nth-child(1) a::after {
   content: "";
   width: 110px;
   height: 0.5px;
@@ -290,7 +294,7 @@ a {
   left: calc(50% - 55px);
 }
 
-.menu ul li:nth-child(2) a::after {
+.menu li:nth-child(2) a::after {
   content: "";
   width: 50px;
   height: 0.5px;
@@ -302,7 +306,7 @@ a {
   left: calc(50% - 25px);
 }
 
-.menu ul li:nth-child(3) a::after {
+.menu li:nth-child(3) a::after {
   content: "";
   width: 80px;
   height: 0.5px;
@@ -314,7 +318,7 @@ a {
   left: calc(50% - 40px);
 }
 
-.menu ul li a:hover::after {
+.menu li a:hover::after {
   content: "";
   transform: scaleX(1);
   transition: transform 300ms ease-in-out;
@@ -323,7 +327,7 @@ a {
 /*############SECTION01-BEGIN############*/
 
 .quote {
-  padding-top: 7em;
+  padding-top: 9em;
 }
 
 .quote p {
@@ -356,7 +360,7 @@ a {
 /*############SECTION02-BEGIN############*/
 
 .photography {
-  padding-top: 7em;
+  padding-top: 9em;
   text-align: center;
 }
 
@@ -408,9 +412,11 @@ a {
 .photography__teaser_text {
   grid-column: 1/13;
     padding: 0 20px;
+    margin-top: 3em;
 }
 
 .photography__teaser_text h1 {
+  position: relative;
 }
 
 .photography__teaser_text h1::after {
@@ -418,13 +424,14 @@ a {
   height: 1px;
   width: 90px;
   position: absolute;
-  top: 55px;
+  top: 1.8em;
   left: calc(50% - 45px);
   background: #fff;
 }
 
 .photography__teaser_text p {
   font-family: "Jaldi-Regular";
+  margin-bottom: 2em;
 }
 
 .teaser_text--button {
@@ -432,7 +439,7 @@ a {
 }
 
 .teaser_text--button a {
-  padding: 15px 60px;
+  padding: 15px 35px;
   text-transform: uppercase;
   background: linear-gradient(to left, rgb(255 255 255 / 0%) 50%, #fff 50%);
   background-size: 200% 100%;
@@ -441,7 +448,7 @@ a {
   transition: all ease 0.5s;
   width: 100%;
   height: 100%;
-  font-size: 1.8em;
+  font-size: 1.25em;
 }
 
 .teaser_text--button a:hover {
@@ -454,25 +461,25 @@ a {
 /*############SECTION03-BEGIN############*/
 
 .design {
-  grid-area: section03;
-  display: flex;
+  text-align: center;
+  padding-top: 9em;
 }
 
 .design__teaser_pictures {
-  width: 50%;
   height: auto;
+  grid-row: 1;
+  grid-column: 1/13;
 }
 
 .design__teaser_pictures ul {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: column nowrap;
   justify-content: flex-end;
 }
 
 .design__teaser_pictures ul li {
   list-style: none;
-  width: 320px;
-  height: 850px;
+  height: 35px;
   filter: grayscale(1);
   overflow: hidden;
   transition: 0.8s;
@@ -505,46 +512,34 @@ a {
 
 #design__teaser_1 {
   background: url(../img/design/borninashe.jpg) center center no-repeat;
-  background-size: 340%;
-}
-#design__teaser_1:hover {
-  background-size: 390%;
+  /* background-size: 340%; */
+  background-size: cover;
 }
 
 #design__teaser_2 {
   background: url(../img/design/covid19.jpg) center center no-repeat;
-  background-size: 240%;
-}
-
-#design__teaser_2:hover {
-  background-size: 290%;
+  /* background-size: 240%; */
+  background-size: cover;
 }
 
 #design__teaser_3 {
   background: url(../img/design/calendar.jpg) center center no-repeat;
-  background-size: 470%;
-}
-
-#design__teaser_3:hover {
-  background-size: 520%;
+  /* background-size: 470%; */
+  background-size: cover;
 }
 
 .design__teaser_text {
-  width: 100%;
-  height: 850px;
+  grid-row: 2;
+  grid-column: 1/13;
+  padding: 0 20px;
+  margin-top: 3em;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
-  text-align: center;
 }
 
 .design__teaser_text h1 {
-  font-family: "Oswald-SemiBold";
-  color: #fff;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  margin-bottom: 120px;
   position: relative;
 }
 
@@ -553,16 +548,14 @@ a {
   height: 1px;
   width: 65px;
   position: absolute;
-  top: 55px;
+  top: 2em;
   left: calc(50% - 32px);
   background: #fff;
 }
 
 .design__teaser_text p {
   font-family: "Jaldi-Regular";
-  color: #fff;
-  font-size: 1.2em;
-  margin-bottom: 150px;
+  margin-bottom: 2em;
 }
 
 /*############SECTION03-END############*/
@@ -570,25 +563,25 @@ a {
 /*############SECTION04-BEGIN############*/
 
 .about {
-  grid-area: section04;
-  display: flex;
+  text-align: center;
+  padding-top: 10em;
+  padding-bottom: 9em;
+  border-bottom: 1px solid #fff;
 }
 
 .about__teaser_text {
-  width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
   align-items: center;
   text-align: center;
+  grid-column: 1/13;
+  padding: 0 20px;
+
 }
 
 .about__teaser_text h1 {
-  font-family: "Oswald-SemiBold";
-  color: #fff;
-  font-size: 1.8em;
-  text-transform: uppercase;
-  margin-bottom: 120px;
+  font-size: 1.375em;
   position: relative;
 }
 
@@ -597,16 +590,14 @@ a {
   height: 1px;
   width: 65px;
   position: absolute;
-  top: 55px;
+  top: 2em;
   left: calc(50% - 32px);
   background: #fff;
 }
 
 .about__teaser_text p {
   font-family: "Jaldi-Regular";
-  color: #fff;
-  font-size: 1.2em;
-  margin-bottom: 150px;
+  margin-bottom: 2em;
 }
 
 .about__teaser_text--button {
@@ -614,7 +605,7 @@ a {
 }
 
 .about__teaser_text--button a {
-  padding: 15px 59px;
+  padding: 15px 35px;
   text-transform: uppercase;
   background: linear-gradient(to left, rgb(255 255 255 / 0%) 50%, #fff 50%);
   background-size: 200% 100%;
@@ -623,7 +614,7 @@ a {
   transition: all ease 0.4s;
   width: 100%;
   height: 100%;
-  font-size: 1.8em;
+  font-size: 1.25em;
 }
 
 .about__teaser_text--button a:hover {
@@ -636,25 +627,22 @@ a {
 /*############FOOTER-BEGIN############*/
 
 .footer {
-  grid-area: footer;
-  display: flex;
-  border-top: 1px solid #fff;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
 .footer__social {
-  width: 33%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 182px;
+  grid-row: 2;
+  grid-column: 2/12;
+  margin-bottom: 2em;
 }
 
 .footer__social ul {
   display: flex;
   justify-content: space-between;
-  list-style: none;
-  width: 300px;
-  margin-left: 30px;
+  width: 100%;
 }
 
 .footer__social ul li {
@@ -713,14 +701,13 @@ a {
 }
 
 .footer__logo {
-  width: 33%;
-  display: flex;
-  align-items: center;
+  width: 100%;
+    grid-column: 3/11;
+  margin-bottom: 2em;
 }
 
 .footer__logo img {
   transition: 0.3s;
-  margin-left: calc(50% - 137.5px);
 }
 
 .footer__logo img:hover {
@@ -730,19 +717,15 @@ a {
 }
 
 .footer__policy {
-  width: 33%;
-  display: flex;
-  justify-content: flex-end;
-  align-items: flex-end;
-  height: 182px;
+  grid-row: 3;
+  
+  grid-column: 2/12;
 }
 
 .footer__policy ul {
-  width: 270px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
-  margin-right: 160px;
 }
 
 .footer__policy ul li {
@@ -773,6 +756,8 @@ a {
   content: "";
   width: 100%;
 }
+
+/* AUFKLAPP INFO DATENSCHUTZERKLÄRUNG */
 
 .policy__info {
   transition: 0.8s;
@@ -838,7 +823,7 @@ a {
   height: auto;
 }
 
-/* small tablet styles */
+/* SMALL TABLET STYLES */
 @media screen and (min-width: 620px) {
 
   * {
@@ -846,17 +831,17 @@ a {
   }
 }
 
-/* large tablet and laptop styles*/
+/* LARGE TABLET AND LAPTOP STYLES */
 @media screen and (min-width: 960px) {
   * {
     font-size: 19px;
   }
 }
 
-/* desktop styles */
+/* DESKTOP STYLES */
 @media screen and (min-width: 1200px) {
 
-  /* Header */
+  /* HEADER */
   .responsive__menu {
     display: none;
   }
@@ -891,7 +876,8 @@ a {
 
 
 
-  /*Section1*/
+  /* PHOTOGRAPHY */
+
   .photography {
     padding: 3em 0;
   }
@@ -917,27 +903,27 @@ a {
   .photography__teaser_pictures ul li:hover {
     filter: grayscale(0);
     transition: 1s;
-    /* background-size: 750% !important; */
+    background-size: 750% !important;
   }
 
   #teaser_1 {
     background: url(../img/autumm/autumm07.jpg) center center no-repeat;
-    /* background-size: 700%; */
+    background-size: 700%; 
   }
 
   #teaser_2 {
     background: url(../img/aalen/aalen01.jpg) center center no-repeat;
-    /* background-size: 700%; */
+    background-size: 700%;
   }
 
   #teaser_3 {
     background: url(../img/barcelona/barcelona04.jpg) center center no-repeat;
-    /* background-size: 700%; */
+    background-size: 700%;
   }
 
   #teaser_4 {
     background: url(../img/Mannheim/mannheim01.jpg) center center no-repeat;
-    /* background-size: 700%; */
+    background-size: 700%;
   }
 
   .photography__teaser_text {
@@ -996,5 +982,19 @@ a {
   .teaser_text--button a:hover {
     color: #000000;
     background-position: left bottom;
+  }
+
+
+  /* DESIGN */
+
+  #design__teaser_1:hover {
+    background-size: 390%;
+  }
+  
+  #design__teaser_2:hover {
+    background-size: 290%;
+  }
+  #design__teaser_3:hover {
+    background-size: 520%;
   }
 }
