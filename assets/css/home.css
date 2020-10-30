@@ -327,7 +327,7 @@ h1 {
 /*############SECTION01-BEGIN############*/
 
 .quote {
-  padding-top: 9em;
+  padding-top: 10em;
 }
 
 .quote p {
@@ -360,7 +360,7 @@ h1 {
 /*############SECTION02-BEGIN############*/
 
 .photography {
-  padding-top: 9em;
+  padding-top: 10em;
   text-align: center;
 }
 
@@ -462,7 +462,7 @@ h1 {
 
 .design {
   text-align: center;
-  padding-top: 9em;
+  padding-top: 10em;
 }
 
 .design__teaser_pictures {
@@ -564,7 +564,7 @@ h1 {
 
 .about {
   text-align: center;
-  padding-top: 10em;
+  padding-top: 11em;
   padding-bottom: 9em;
   border-bottom: 1px solid #fff;
 }
