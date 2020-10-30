@@ -373,7 +373,7 @@ h1 {
 }
 
 .photography__teaser_pictures ul li {
-  height: 30px;
+  height: 45px;
   filter: grayscale(1);
   overflow: hidden;
   transition: 1s;
@@ -479,7 +479,7 @@ h1 {
 
 .design__teaser_pictures ul li {
   list-style: none;
-  height: 35px;
+  height: 45px;
   filter: grayscale(1);
   overflow: hidden;
   transition: 0.8s;
