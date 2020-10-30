@@ -2,7 +2,7 @@ window.addEventListener(
   "load",
   function () {
     let resp = document.querySelector(".responsive__menu");
-    let respChilds = document.querySelector("#header__menu");
+    let respChilds = document.querySelector(".menu");
 
 
     resp.addEventListener("click", function () {
