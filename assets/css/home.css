@@ -106,6 +106,10 @@ body {
   color: #ffffff;
 }
 
+/* body.resp_active{
+  position: fixed;
+} */
+
 /* p, ul, li {
   margin: 0;
 } */
@@ -120,6 +124,10 @@ h1 {
 ul,
 li {
   list-style: none;
+}
+
+p, h1, h2, h3, h4, h5{
+  margin: 0;
 }
 
 a {
@@ -255,11 +263,13 @@ a {
     opacity: 0;
     background: rgb(0 0 0 / 0.7);
     backdrop-filter: blur(10px);
+    pointer-events: none;
 }
 
 .menu.active {
   opacity: 1;
   position: fixed;
+  pointer-events: all;
 }
 
 .menu ul li a {
@@ -313,7 +323,7 @@ a {
 /*############SECTION01-BEGIN############*/
 
 .quote {
-  padding: 3em 0;
+  padding-top: 7em;
 }
 
 .quote p {
@@ -346,7 +356,7 @@ a {
 /*############SECTION02-BEGIN############*/
 
 .photography {
-  padding: 3em 0;
+  padding-top: 7em;
   text-align: center;
 }
 
@@ -374,21 +384,25 @@ a {
 #teaser_1 {
   background: url(../img/autumm/autumm07.jpg) center center no-repeat;
   /* background-size: 700%; */
+  background-size: cover;
 }
 
 #teaser_2 {
   background: url(../img/aalen/aalen01.jpg) center center no-repeat;
   /* background-size: 700%; */
+  background-size: cover;
 }
 
 #teaser_3 {
   background: url(../img/barcelona/barcelona04.jpg) center center no-repeat;
   /* background-size: 700%; */
+  background-size: cover;
 }
 
 #teaser_4 {
   background: url(../img/Mannheim/mannheim01.jpg) center center no-repeat;
   /* background-size: 700%; */
+  background-size: cover;
 }
 
 .photography__teaser_text {
@@ -826,10 +840,17 @@ a {
 
 /* small tablet styles */
 @media screen and (min-width: 620px) {
+
+  * {
+    font-size: 18px;
+  }
 }
 
 /* large tablet and laptop styles*/
 @media screen and (min-width: 960px) {
+  * {
+    font-size: 19px;
+  }
 }
 
 /* desktop styles */
@@ -840,24 +861,18 @@ a {
     display: none;
   }
 
-  #header__menu {
-    display: block;
-  }
-
-  #header__menu {
-    transform: translateX(0);
-    position: relative;
+  .menu {
+    flex-direction: row;
+    justify-content: space-between;
     height: auto;
-    width: 545px;
+    width: 100%;
+    min-width: 420px;
+    opacity: 1;
     background: none;
     grid-column: 10;
-  }
-
-  #header__menu ul {
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-  }
+    backdrop-filter: none;
+    position: relative;
+}
 
   .header__logo {
     grid-column: 3;

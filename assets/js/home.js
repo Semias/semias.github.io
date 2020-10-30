@@ -5,6 +5,11 @@ window.addEventListener(
     let respChilds = document.querySelector(".menu");
 
 
+
+    resp.addEventListener("click", function () {
+      document.querySelector("body").classList.toggle("resp_active");
+    });
+
     resp.addEventListener("click", function () {
       resp.classList.toggle("active");
     });
