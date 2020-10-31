@@ -222,6 +222,7 @@ a:hover {
 }
 
 /*############HEADER############*/
+
 .header {
   position: absolute;
   top: 0;
@@ -297,7 +298,7 @@ a:hover {
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
-  top: 45px;
+  top: 1.6em;
   left: calc(50% - 55px);
 }
 
@@ -309,7 +310,7 @@ a:hover {
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
-  top: 45px;
+  top: 1.6em;
   left: calc(50% - 25px);
 }
 
@@ -321,7 +322,7 @@ a:hover {
   transform: scaleX(0);
   transition: transform 300ms ease-in-out;
   position: absolute;
-  top: 45px;
+  top: 1.6em;
   left: calc(50% - 40px);
 }
 
