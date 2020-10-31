@@ -104,6 +104,7 @@ body {
   background: var(--grey);
   overflow-x: hidden;
   color: #ffffff;
+  /* background-image: linear-gradient(141deg, #202020, #262a28); */
 }
 
 /* body.resp_active{
@@ -137,16 +138,21 @@ a {
 
 h1 {
   font-family: "Oswald-SemiBold";
-  font-size: 1.375em;
+  font-size: 1.45em;
   text-transform: uppercase;
   color: #fff;
   margin-bottom: 2em;
 }
 
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
 /*############RESP_MENU############*/
 
 .responsive__menu {
-  width: 40px;
+  width: 100%;
   height: 25px;
   cursor: pointer;
   z-index: 999;
@@ -332,7 +338,7 @@ h1 {
 
 .quote p {
   color: #fff;
-  font-size: 1.125em;
+  font-size: 1.2em;
   text-align: center;
   font-family: "Oswald-Light";
   text-transform: uppercase;
@@ -387,25 +393,21 @@ h1 {
 
 #teaser_1 {
   background: url(../img/autumm/autumm07.jpg) center center no-repeat;
-  /* background-size: 700%; */
   background-size: cover;
 }
 
 #teaser_2 {
   background: url(../img/aalen/aalen01.jpg) center center no-repeat;
-  /* background-size: 700%; */
   background-size: cover;
 }
 
 #teaser_3 {
   background: url(../img/barcelona/barcelona04.jpg) center center no-repeat;
-  /* background-size: 700%; */
   background-size: cover;
 }
 
 #teaser_4 {
   background: url(../img/Mannheim/mannheim01.jpg) center center no-repeat;
-  /* background-size: 700%; */
   background-size: cover;
 }
 
@@ -441,18 +443,38 @@ h1 {
 .teaser_text--button a {
   padding: 15px 35px;
   text-transform: uppercase;
+  /* background: linear-gradient(to left, rgb(255 255 255 / 0%) 50%, rgba(19,32,59,1) 50%, rgba(31,38,130,1) 128.1%);  */
   background: linear-gradient(to left, rgb(255 255 255 / 0%) 50%, #fff 50%);
   background-size: 200% 100%;
   background-position: right bottom;
-  border: 1px solid #fff;
+  border: 1px solid #fff; 
+  border-radius: 50px;
   transition: all ease 0.5s;
   width: 100%;
   height: 100%;
   font-size: 1.25em;
 }
 
+
+/* .teaser_text--button a::after {
+  content: "";
+  width: 0;
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  border-radius: 50px;
+  background: #fff;
+  transition: 0.3s;
+}
+
+.teaser_text--button a:hover::after {
+width: 100%;
+z-index: -1;
+} */
+
 .teaser_text--button a:hover {
-  color: #000000;
+  color: #000;
   background-position: left bottom;
 }
 
@@ -512,19 +534,16 @@ h1 {
 
 #design__teaser_1 {
   background: url(../img/design/borninashe.jpg) center center no-repeat;
-  /* background-size: 340%; */
   background-size: cover;
 }
 
 #design__teaser_2 {
   background: url(../img/design/covid19.jpg) center center no-repeat;
-  /* background-size: 240%; */
   background-size: cover;
 }
 
 #design__teaser_3 {
   background: url(../img/design/calendar.jpg) center center no-repeat;
-  /* background-size: 470%; */
   background-size: cover;
 }
 
@@ -545,12 +564,12 @@ h1 {
 
 .design__teaser_text h1::after {
   content: "";
-  height: 1px;
-  width: 65px;
-  position: absolute;
-  top: 2em;
-  left: calc(50% - 32px);
-  background: #fff;
+    height: 1px;
+    width: 40px;
+    position: absolute;
+    top: 2em;
+    left: calc(50% - 20px);
+    background: #fff;
 }
 
 .design__teaser_text p {
@@ -611,6 +630,7 @@ h1 {
   background-size: 200% 100%;
   background-position: right bottom;
   border: 1px solid #fff;
+  border-radius: 50px;
   transition: all ease 0.4s;
   width: 100%;
   height: 100%;
@@ -689,12 +709,12 @@ h1 {
 .footer__social .icon-instagram,
 .footer__social .icon-facebook {
   color: #fff;
-  font-size: 1.6rem;
+  font-size: 1.35rem;
 }
 
 .footer__social ul li a {
   width: 100%;
-  height: 45px;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -731,7 +751,7 @@ h1 {
 .footer__policy ul li {
   list-style: none;
   color: #fff;
-  font-size: 1.3em;
+  font-size: 1.2em;
   position: relative;
   scroll-behavior: smooth;
   cursor: pointer;
@@ -761,7 +781,7 @@ h1 {
 
 .policy__info {
   transition: 0.8s;
-  width: calc(100% - 60px);
+  width: 100%;
   height: 0;
   padding: 0;
   z-index: 999;
@@ -772,12 +792,8 @@ h1 {
 
 .policy__info.open {
   transition: 0.8s;
-  height: 1500px;
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+  height: auto;
+  padding: 2em 1em;
   z-index: 999;
   transform: translateY(0);
   opacity: 1;
@@ -785,42 +801,31 @@ h1 {
 }
 
 .policy__info_close {
-  width: 116px;
-  height: 70px;
+  padding: 0px 20px;
   border: 1px solid #fff;
+  grid-row: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  grid-column: 6/8;
+  margin-bottom: 2em;
+}
+
+.policy__info_close span {
+  font-size: 2em;
+  font-family: "Jaldi-Regular";
 }
 
 .policy__info_close:hover {
   cursor: pointer;
 }
 
-.policy__info_close ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 100%;
-}
-
-.policy__info_close ul li {
-  list-style: none;
-  height: 55px;
-  width: 1px;
-  background: #fff;
-}
-
-.policy__info_close ul li:nth-child(1) {
-  transform: rotate(45deg);
-}
-
-.policy__info_close ul li:nth-child(2) {
-  transform: rotate(-45deg);
-}
-
 .policy__info_content {
   border: 1px solid #fff;
   width: 100%;
   height: auto;
+  grid-row: 2;
+  grid-column: 1/13;
 }
 
 /* SMALL TABLET STYLES */
@@ -829,6 +834,20 @@ h1 {
   * {
     font-size: 18px;
   }
+
+  .header__logo {
+    min-width: 200px;
+}
+
+.about {
+  padding-top: 15em;
+  padding-bottom: 12em;
+}
+
+.design, .photography, .quote {
+  text-align: center;
+  padding-top: 15em;
+}
 }
 
 /* LARGE TABLET AND LAPTOP STYLES */
@@ -836,6 +855,174 @@ h1 {
   * {
     font-size: 19px;
   }
+
+  .header__logo {
+    min-width: 220px;
+    margin: 50px 0;
+}
+
+.about {
+  padding-top: 15em;
+  padding-bottom: 12em;
+}
+
+.design, .photography, .quote {
+  text-align: center;
+  padding-top: 15em;
+}
+
+h1 {
+  margin-bottom: 3em;
+}
+
+.responsive__menu {
+  grid-column: 11;
+}
+
+.menu li:nth-child(1) a::after {
+  top: 1.6em;
+}
+
+.menu li:nth-child(2) a::after {
+  top: 1.6em;
+}
+
+.menu li:nth-child(3) a::after {
+  top: 1.6em;
+}
+
+/* Photography */
+
+.photography__teaser_pictures {
+  grid-column: 1/6;
+}
+
+.photography__teaser_text {
+  grid-column: 6/13;
+  padding: 4em 40px;
+  margin-top: 0;
+}
+
+.photography__teaser_text p {
+  margin-bottom: 5em;
+}
+
+.photography__teaser_pictures ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.photography__teaser_pictures ul li {
+  height: 100%;
+  width: 100%;
+}
+
+.photography__teaser_pictures ul li:hover {
+  filter: grayscale(0);
+  transition: 1s;
+  background-size: 910% !important;
+}
+
+#teaser_1 {
+  background: url(../img/autumm/autumm07.jpg) center center no-repeat;
+  background-size: 860%; 
+}
+
+#teaser_2 {
+  background: url(../img/aalen/aalen01.jpg) center center no-repeat;
+  background-size: 860%;
+}
+
+#teaser_3 {
+  background: url(../img/barcelona/barcelona04.jpg) center center no-repeat;
+  background-size: 860%;
+}
+
+#teaser_4 {
+  background: url(../img/Mannheim/mannheim01.jpg) center center no-repeat;
+  background-size: 860%;
+}
+
+/* Design */
+
+.design__teaser_text {
+  grid-row: 1;
+  grid-column: 1/8;
+  padding: 4em 40px;
+    margin-top: 0;
+}
+
+.design__teaser_text p {
+  margin-bottom: 5em;
+}
+
+.design__teaser_pictures {
+  height: 100%;
+  grid-column: 8/13;
+}
+
+.design__teaser_pictures ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+}
+
+
+.design__teaser_pictures ul li {
+  height: 100%;
+  width: 100%;
+}
+
+#design__teaser_1 {
+  background: url(../img/design/borninashe.jpg) center center no-repeat;
+  background-size: 460%;
+}
+
+#design__teaser_1:hover {
+  background-size: 510%;
+}
+
+#design__teaser_2 {
+  background: url(../img/design/covid19.jpg) center center no-repeat;
+  background-size: 305%;
+}
+
+#design__teaser_2:hover {
+  background-size: 355%;
+}
+
+#design__teaser_3 {
+  background: url(../img/design/calendar.jpg) center center no-repeat;
+  background-size: 610%;
+}
+
+#design__teaser_3:hover {
+  background-size: 660%;
+}
+
+
+/* About me */
+.about__teaser_text {
+  grid-column: 3/11;
+}
+
+.about__teaser_text p {
+  margin-bottom: 5em;
+}
+
+
+
+/* Policy */
+
+
+
+.policy__info_close {
+  grid-column: 6/8;
+}
+
 }
 
 /* DESKTOP STYLES */
@@ -851,150 +1038,185 @@ h1 {
     justify-content: space-between;
     height: auto;
     width: 100%;
-    min-width: 420px;
+    min-width: 500px;
     opacity: 1;
     background: none;
-    grid-column: 10;
+    grid-column: 11;
     backdrop-filter: none;
     position: relative;
+    pointer-events: all;
 }
 
-  .header__logo {
-    grid-column: 3;
-    width: 400px;
-  }
-
-    #headerImage {
-      height: 100vh;
-      overflow: hidden;
-  }
-
-  #headerImage img {
-    transform: translateY(-20%);
+.menu li a {
+  font-size: 1.6em;
 }
 
-
-
-
-  /* PHOTOGRAPHY */
-
-  .photography {
-    padding: 3em 0;
-  }
-
-  .photography__teaser_pictures {
-    height: auto;
-    grid-row: 1;
-    grid-column: 1/12;
-  }
-
-  .photography__teaser_pictures ul {
-    display: flex;
-    flex-flow: column nowrap;
-  }
-
-  .photography__teaser_pictures ul li {
-    height: 30px;
-    filter: grayscale(1);
+  #headerImage {
+    height: 100vh;
     overflow: hidden;
-    transition: 1s;
   }
 
-  .photography__teaser_pictures ul li:hover {
-    filter: grayscale(0);
-    transition: 1s;
-    background-size: 750% !important;
-  }
+.header__logo {
+  min-width: 250px;
+  margin: 50px 0;
+}
 
-  #teaser_1 {
-    background: url(../img/autumm/autumm07.jpg) center center no-repeat;
-    background-size: 700%; 
-  }
+.about {
+padding-top: 15em;
+padding-bottom: 12em;
+}
 
-  #teaser_2 {
-    background: url(../img/aalen/aalen01.jpg) center center no-repeat;
-    background-size: 700%;
-  }
+.design, .photography, .quote {
+text-align: center;
+padding-top: 15em;
+}
 
-  #teaser_3 {
-    background: url(../img/barcelona/barcelona04.jpg) center center no-repeat;
-    background-size: 700%;
-  }
+h1 {
+margin-bottom: 5em;
+font-size: 1.5em;
+}
 
-  #teaser_4 {
-    background: url(../img/Mannheim/mannheim01.jpg) center center no-repeat;
-    background-size: 700%;
-  }
+.responsive__menu {
+grid-column: 11;
+}
 
-  .photography__teaser_text {
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    grid-row: 2;
-  }
+.menu li:nth-child(1) a::after {
+top: 1.6em;
+}
 
-  .photography__teaser_text h1 {
-    font-family: "Oswald-SemiBold";
-    color: #fff;
-    font-size: 1.8em;
-    text-transform: uppercase;
-    margin-bottom: 120px;
-    position: relative;
-  }
+.menu li:nth-child(2) a::after {
+top: 1.6em;
+}
 
-  .photography__teaser_text h1::after {
-    content: "";
-    height: 1px;
-    width: 90px;
-    position: absolute;
-    top: 55px;
-    left: calc(50% - 45px);
-    background: #fff;
-  }
+.menu li:nth-child(3) a::after {
+top: 1.6em;
+}
 
-  .photography__teaser_text p {
-    font-family: "Jaldi-Regular";
-    color: #fff;
-    font-size: 1.2em;
-    width: 628px;
-    margin-bottom: 150px;
-  }
+.quote p {
+  font-size: 1.5em;
+}
 
-  .teaser_text--button {
-    padding: 15px 0;
-  }
+/* Photography */
 
-  .teaser_text--button a {
-    padding: 15px 60px;
-    text-transform: uppercase;
-    background: linear-gradient(to left, rgb(255 255 255 / 0%) 50%, #fff 50%);
-    background-size: 200% 100%;
-    background-position: right bottom;
-    border: 1px solid #fff;
-    transition: all ease 0.5s;
-    width: 100%;
-    height: 100%;
-    font-size: 1.8em;
-  }
+.photography__teaser_pictures {
+grid-column: 1/7;
+}
 
-  .teaser_text--button a:hover {
-    color: #000000;
-    background-position: left bottom;
-  }
+.photography__teaser_text {
+grid-column: 7/13;
+padding: 10em 40px;
+margin-top: 0;
+}
+
+.photography__teaser_text p {
+margin-bottom: 7em;
+}
+
+.photography__teaser_pictures ul {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 100%;
+}
+
+.photography__teaser_pictures ul li {
+height: 100%;
+width: 100%;
+}
+
+.photography__teaser_pictures ul li:hover {
+filter: grayscale(0);
+transition: 1s;
+background-size: 950% !important;
+}
+
+#teaser_1 {
+background: url(../img/autumm/autumm07.jpg) center center no-repeat;
+background-size: 900%; 
+}
+
+#teaser_2 {
+background: url(../img/aalen/aalen01.jpg) center center no-repeat;
+background-size: 900%;
+}
+
+#teaser_3 {
+background: url(../img/barcelona/barcelona04.jpg) center center no-repeat;
+background-size: 900%;
+}
+
+#teaser_4 {
+background: url(../img/Mannheim/mannheim01.jpg) center center no-repeat;
+background-size: 900%;
+}
+
+/* Design */
+
+.design__teaser_text {
+grid-row: 1;
+grid-column: 1/7;
+padding: 10em 40px;
+  margin-top: 0;
+}
+
+.design__teaser_text p {
+margin-bottom: 7em;
+}
+
+.design__teaser_pictures {
+height: 100%;
+grid-column: 7/13;
+}
+
+.design__teaser_pictures ul {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+height: 100%;
+}
 
 
-  /* DESIGN */
+.design__teaser_pictures ul li {
+height: 100%;
+width: 100%;
+}
 
-  #design__teaser_1:hover {
-    background-size: 390%;
-  }
-  
-  #design__teaser_2:hover {
-    background-size: 290%;
-  }
-  #design__teaser_3:hover {
-    background-size: 520%;
-  }
+/* About me */
+.about__teaser_text {
+grid-column: 4/10;
+}
+
+
+#design__teaser_1 {
+background: url(../img/design/borninashe.jpg) center center no-repeat;
+background-size: 460%;
+}
+
+#design__teaser_1:hover {
+background-size: 510%;
+}
+
+#design__teaser_2 {
+background: url(../img/design/covid19.jpg) center center no-repeat;
+background-size: 315%;
+}
+
+#design__teaser_2:hover {
+background-size: 365%;
+}
+
+#design__teaser_3 {
+background: url(../img/design/calendar.jpg) center center no-repeat;
+background-size: 630%;
+}
+
+#design__teaser_3:hover {
+background-size: 680%;
+}
+
+/* Policy */
+
+.policy__info_close {
+grid-column: 6/8;
+}
 }
