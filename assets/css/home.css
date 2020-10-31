@@ -1104,7 +1104,7 @@ grid-column: 1/7;
 
 .photography__teaser_text {
 grid-column: 7/13;
-padding: 10em 40px;
+padding: 8em 40px;
 margin-top: 0;
 }
 
@@ -1155,7 +1155,7 @@ background-size: 900%;
 .design__teaser_text {
 grid-row: 1;
 grid-column: 1/7;
-padding: 10em 40px;
+padding: 8em 40px;
   margin-top: 0;
 }
 
