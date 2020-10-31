@@ -19,30 +19,26 @@
   </head>
 
   <body>
-    <header class="header">
-        <div class="header__logo" data-aos="fade-right" data-aos-delay="400">
-          <a href="index.html">
-            <img src="assets/img/logo.svg"/>
-          </a>
-        </div>
-        <div class="responsive__menu">
-          <ul>
-            <li></li>
-          </ul>
-        </div>
-        <nav id="header__menu">
-          <ul>
-            <li class="current" data-aos="fade-left" data-aos-delay="100">
-              <a href="photography.html">Photography</a>
-            </li>
-            <li data-aos="fade-left" data-aos-delay="200">
-              <a href="design.html">Design</a>
-            </li>
-            <li data-aos="fade-left" data-aos-delay="300">
-              <a href="about-me.html">About me</a>
-            </li>
-          </ul>
-        </nav>
+    <header class="header grid">
+      <a href="index.html" class="header__logo" data-aos="fade-right">
+        <img src="assets/img/logo.svg" />
+      </a>
+      <div class="responsive__menu" data-aos="fade-left">
+        <ul>
+          <li></li>
+        </ul>
+      </div>
+        <ul class="menu">
+          <li>
+            <a href="photography.html">Photography</a>
+          </li>
+          <li>
+            <a href="design.html">Design</a>
+          </li>
+          <li>
+            <a href="about-me.html">About me</a>
+          </li>
+        </ul>
     </header>
 
     <section class="section__gallery">
@@ -55,7 +51,7 @@
           </div>
         </div> -->
     </section>
-    <footer class="footer">
+    <footer class="footer grid">
       <div class="footer__social">
         <ul>
           <li class="facebook">
@@ -90,20 +86,11 @@
         </ul>
       </div>
     </footer>
-    <section class="policy__info">
+    <section class="policy__info grid">
       <div class="policy__info_close">
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
+        <span>X</span>
       </div>
       <div class="policy__info_content"></div>
-      <div class="policy__info_close">
-        <ul>
-          <li></li>
-          <li></li>
-        </ul>
-      </div>
     </section>
     <script>
       AOS.init();
