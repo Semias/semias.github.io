@@ -90,6 +90,7 @@ body::-webkit-scrollbar-thumb {
 
 :root {
   --grey: #202020;
+  overflow-x: hidden;
 }
 
 * {
