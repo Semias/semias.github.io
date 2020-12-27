@@ -48,7 +48,7 @@ window.addEventListener(
     policyClose.forEach((item) => {
       item.addEventListener("click", (e) => {
         e.stopPropagation();
-        policy.classList.emove("open");
+        policy.classList.remove("open");
       });
     });
 

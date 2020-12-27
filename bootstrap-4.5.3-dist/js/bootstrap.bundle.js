@@ -274,11 +274,11 @@
         return;
       }
 
-      this._emoveElement(rootElement);
+      this._removeElement(rootElement);
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].emoveData(this._element, DATA_KEY);
+      $__default['default'].removeData(this._element, DATA_KEY);
       this._element = null;
     } // Private
     ;
@@ -304,10 +304,10 @@
       return closeEvent;
     };
 
-    _proto._emoveElement = function _emoveElement(element) {
+    _proto._removeElement = function _removeElement(element) {
       var _this = this;
 
-      $__default['default'](element).emoveClass(CLASS_NAME_SHOW);
+      $__default['default'](element).removeClass(CLASS_NAME_SHOW);
 
       if (!$__default['default'](element).hasClass(CLASS_NAME_FADE)) {
         this._destroyElement(element);
@@ -322,7 +322,7 @@
     };
 
     _proto._destroyElement = function _destroyElement(element) {
-      $__default['default'](element).detach().trigger(EVENT_CLOSED).emove();
+      $__default['default'](element).detach().trigger(EVENT_CLOSED).remove();
     } // Static
     ;
 
@@ -440,7 +440,7 @@
               var activeElement = rootElement.querySelector(SELECTOR_ACTIVE);
 
               if (activeElement) {
-                $__default['default'](activeElement).emoveClass(CLASS_NAME_ACTIVE);
+                $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE);
               }
             }
           }
@@ -473,7 +473,7 @@
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].emoveData(this._element, DATA_KEY$1);
+      $__default['default'].removeData(this._element, DATA_KEY$1);
       this._element = null;
     } // Static
     ;
@@ -551,7 +551,7 @@
       if (input.checked || input.hasAttribute('checked')) {
         button.classList.add(CLASS_NAME_ACTIVE);
       } else {
-        button.classList.emove(CLASS_NAME_ACTIVE);
+        button.classList.remove(CLASS_NAME_ACTIVE);
       }
     } // find all button toggles
 
@@ -564,7 +564,7 @@
       if (_button.getAttribute('aria-pressed') === 'true') {
         _button.classList.add(CLASS_NAME_ACTIVE);
       } else {
-        _button.classList.emove(CLASS_NAME_ACTIVE);
+        _button.classList.remove(CLASS_NAME_ACTIVE);
       }
     }
   });
@@ -764,7 +764,7 @@
 
     _proto.dispose = function dispose() {
       $__default['default'](this._element).off(EVENT_KEY$2);
-      $__default['default'].emoveData(this._element, DATA_KEY$2);
+      $__default['default'].removeData(this._element, DATA_KEY$2);
       this._items = null;
       this._config = null;
       this._element = null;
@@ -960,7 +960,7 @@
     _proto._setActiveIndicatorElement = function _setActiveIndicatorElement(element) {
       if (this._indicatorsElement) {
         var indicators = [].slice.call(this._indicatorsElement.querySelectorAll(SELECTOR_ACTIVE$1));
-        $__default['default'](indicators).emoveClass(CLASS_NAME_ACTIVE$1);
+        $__default['default'](indicators).removeClass(CLASS_NAME_ACTIVE$1);
 
         var nextIndicator = this._indicatorsElement.children[this._getItemIndex(element)];
 
@@ -1043,15 +1043,15 @@
 
         var transitionDuration = Util.getTransitionDurationFromElement(activeElement);
         $__default['default'](activeElement).one(Util.TRANSITION_END, function () {
-          $__default['default'](nextElement).emoveClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
-          $__default['default'](activeElement).emoveClass(CLASS_NAME_ACTIVE$1 + " " + orderClassName + " " + directionalClassName);
+          $__default['default'](nextElement).removeClass(directionalClassName + " " + orderClassName).addClass(CLASS_NAME_ACTIVE$1);
+          $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE$1 + " " + orderClassName + " " + directionalClassName);
           _this4._isSliding = false;
           setTimeout(function () {
             return $__default['default'](_this4._element).trigger(slidEvent);
           }, 0);
         }).emulateTransitionEnd(transitionDuration);
       } else {
-        $__default['default'](activeElement).emoveClass(CLASS_NAME_ACTIVE$1);
+        $__default['default'](activeElement).removeClass(CLASS_NAME_ACTIVE$1);
         $__default['default'](nextElement).addClass(CLASS_NAME_ACTIVE$1);
         this._isSliding = false;
         $__default['default'](this._element).trigger(slidEvent);
@@ -1303,17 +1303,17 @@
 
       var dimension = this._getDimension();
 
-      $__default['default'](this._element).emoveClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
+      $__default['default'](this._element).removeClass(CLASS_NAME_COLLAPSE).addClass(CLASS_NAME_COLLAPSING);
       this._element.style[dimension] = 0;
 
       if (this._triggerArray.length) {
-        $__default['default'](this._triggerArray).emoveClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
+        $__default['default'](this._triggerArray).removeClass(CLASS_NAME_COLLAPSED).attr('aria-expanded', true);
       }
 
       this.setTransitioning(true);
 
       var complete = function complete() {
-        $__default['default'](_this._element).emoveClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
+        $__default['default'](_this._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
         _this._element.style[dimension] = '';
 
         _this.setTransitioning(false);
@@ -1346,7 +1346,7 @@
 
       this._element.style[dimension] = this._element.getBoundingClientRect()[dimension] + "px";
       Util.reflow(this._element);
-      $__default['default'](this._element).addClass(CLASS_NAME_COLLAPSING).emoveClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
+      $__default['default'](this._element).addClass(CLASS_NAME_COLLAPSING).removeClass(CLASS_NAME_COLLAPSE + " " + CLASS_NAME_SHOW$1);
       var triggerArrayLength = this._triggerArray.length;
 
       if (triggerArrayLength > 0) {
@@ -1369,7 +1369,7 @@
       var complete = function complete() {
         _this2.setTransitioning(false);
 
-        $__default['default'](_this2._element).emoveClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN);
+        $__default['default'](_this2._element).removeClass(CLASS_NAME_COLLAPSING).addClass(CLASS_NAME_COLLAPSE).trigger(EVENT_HIDDEN);
       };
 
       this._element.style[dimension] = '';
@@ -1382,7 +1382,7 @@
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].emoveData(this._element, DATA_KEY$3);
+      $__default['default'].removeData(this._element, DATA_KEY$3);
       this._config = null;
       this._parent = null;
       this._element = null;
@@ -2336,12 +2336,12 @@
     var isHoriz = ['right', 'left'].indexOf(placement) !== -1;
     var mainSide = isHoriz ? 'top' : 'left';
     var secondarySide = isHoriz ? 'left' : 'top';
-    var measuement = isHoriz ? 'height' : 'width';
-    var secondaryMeasuement = !isHoriz ? 'height' : 'width';
+    var measurement = isHoriz ? 'height' : 'width';
+    var secondaryMeasurement = !isHoriz ? 'height' : 'width';
 
-    popperOffsets[mainSide] = referenceOffsets[mainSide] + referenceOffsets[measuement] / 2 - popperRect[measuement] / 2;
+    popperOffsets[mainSide] = referenceOffsets[mainSide] + referenceOffsets[measurement] / 2 - popperRect[measurement] / 2;
     if (placement === secondarySide) {
-      popperOffsets[secondarySide] = referenceOffsets[secondarySide] - popperRect[secondaryMeasuement];
+      popperOffsets[secondarySide] = referenceOffsets[secondarySide] - popperRect[secondaryMeasurement];
     } else {
       popperOffsets[secondarySide] = referenceOffsets[getOppositePlacement(secondarySide)];
     }
@@ -2523,7 +2523,7 @@
 
     // touch DOM only if `applyStyle` modifier is enabled
     if (isModifierEnabled(this.modifiers, 'applyStyle')) {
-      this.popper.emoveAttribute('x-placement');
+      this.popper.removeAttribute('x-placement');
       this.popper.style.position = '';
       this.popper.style.top = '';
       this.popper.style.left = '';
@@ -2535,10 +2535,10 @@
 
     this.disableEventListeners();
 
-    // emove the popper if user explicitly asked for the deletion on destroy
-    // do not use `emove` because IE11 doesn't support it
-    if (this.options.emoveOnDestroy) {
-      this.popper.parentNode.emoveChild(this.popper);
+    // remove the popper if user explicitly asked for the deletion on destroy
+    // do not use `remove` because IE11 doesn't support it
+    if (this.options.removeOnDestroy) {
+      this.popper.parentNode.removeChild(this.popper);
     }
     return this;
   }
@@ -2597,18 +2597,18 @@
   }
 
   /**
-   * emove event listeners used to update the popper position
+   * Remove event listeners used to update the popper position
    * @method
    * @memberof Popper.Utils
    * @private
    */
-  function emoveEventListeners(reference, state) {
-    // emove resize event listener on window
-    getWindow(reference).emoveEventListener('resize', state.updateBound);
+  function removeEventListeners(reference, state) {
+    // Remove resize event listener on window
+    getWindow(reference).removeEventListener('resize', state.updateBound);
 
-    // emove scroll event listener on scroll parents
+    // Remove scroll event listener on scroll parents
     state.scrollParents.forEach(function (target) {
-      target.emoveEventListener('scroll', state.updateBound);
+      target.removeEventListener('scroll', state.updateBound);
     });
 
     // Reset state
@@ -2620,7 +2620,7 @@
   }
 
   /**
-   * It will emove resize/scroll events and won't recalculate popper position
+   * It will remove resize/scroll events and won't recalculate popper position
    * when they are triggered. It also won't trigger `onUpdate` callback anymore,
    * unless you call `update` method manually.
    * @method
@@ -2629,7 +2629,7 @@
   function disableEventListeners() {
     if (this.state.eventsEnabled) {
       cancelAnimationFrame(this.scheduleUpdate);
-      this.state = emoveEventListeners(this.reference, this.state);
+      this.state = removeEventListeners(this.reference, this.state);
     }
   }
 
@@ -2677,7 +2677,7 @@
       if (value !== false) {
         element.setAttribute(prop, attributes[prop]);
       } else {
-        element.emoveAttribute(prop);
+        element.removeAttribute(prop);
       }
     });
   }
@@ -2801,7 +2801,7 @@
         y = options.y;
     var popper = data.offsets.popper;
 
-    // emove this legacy support in Popper.js v2
+    // Remove this legacy support in Popper.js v2
 
     var legacyGpuAccelerationOption = find(data.instance.modifiers, function (modifier) {
       return modifier.name === 'applyStyle';
@@ -3187,10 +3187,10 @@
     var isVertical = ['top', 'bottom'].indexOf(placement) !== -1;
     var side = isVertical ? 'right' : 'bottom';
     var opSide = isVertical ? 'left' : 'top';
-    var measuement = isVertical ? 'width' : 'height';
+    var measurement = isVertical ? 'width' : 'height';
 
     if (popper[side] < floor(reference[opSide])) {
-      data.offsets.popper[opSide] = floor(reference[opSide]) - popper[measuement];
+      data.offsets.popper[opSide] = floor(reference[opSide]) - popper[measurement];
     }
     if (popper[opSide] > floor(reference[side])) {
       data.offsets.popper[opSide] = floor(reference[side]);
@@ -3205,13 +3205,13 @@
    * @memberof {modifiers~offset}
    * @private
    * @argument {String} str - Value + unit string
-   * @argument {String} measuement - `height` or `width`
+   * @argument {String} measurement - `height` or `width`
    * @argument {Object} popperOffsets
    * @argument {Object} referenceOffsets
    * @returns {Number|String}
    * Value in pixels, or original string if no values were extracted
    */
-  function toValue(str, measuement, popperOffsets, referenceOffsets) {
+  function toValue(str, measurement, popperOffsets, referenceOffsets) {
     // separate value from unit
     var split = str.match(/((?:\-|\+)?\d*\.?\d*)(.*)/);
     var value = +split[1];
@@ -3235,7 +3235,7 @@
       }
 
       var rect = getClientRect(element);
-      return rect[measuement] / 100 * value;
+      return rect[measurement] / 100 * value;
     } else if (unit === 'vh' || unit === 'vw') {
       // if is a vh or vw, we calculate the size based on the viewport
       var size = void 0;
@@ -3295,7 +3295,7 @@
     // Convert the values with units to absolute pixels to allow our computations
     ops = ops.map(function (op, index) {
       // Most of the units rely on the orientation of the popper
-      var measuement = (index === 1 ? !useHeight : useHeight) ? 'height' : 'width';
+      var measurement = (index === 1 ? !useHeight : useHeight) ? 'height' : 'width';
       var mergeWithPrevious = false;
       return op
       // This aggregates any `+` or `-` sign that aren't considered operators
@@ -3315,7 +3315,7 @@
       }, [])
       // Here we convert the string values into number values (in px)
       .map(function (str) {
-        return toValue(str, measuement, popperOffsets, referenceOffsets);
+        return toValue(str, measurement, popperOffsets, referenceOffsets);
       });
     });
 
@@ -3464,11 +3464,11 @@
 
       var isVertical = ['bottom', 'top'].indexOf(basePlacement) !== -1;
       var side = isVertical ? 'left' : 'top';
-      var measuement = isVertical ? 'width' : 'height';
+      var measurement = isVertical ? 'width' : 'height';
 
       var shiftOffsets = {
         start: defineProperty({}, side, reference[side]),
-        end: defineProperty({}, side, reference[side] + reference[measuement] - popper[measuement])
+        end: defineProperty({}, side, reference[side] + reference[measurement] - popper[measurement])
       };
 
       data.offsets.popper = _extends$1({}, popper, shiftOffsets[shiftvariation]);
@@ -3597,7 +3597,7 @@
      * You can provide a single value (as `Number` or `String`), or a pair of values
      * as `String` divided by a comma or one (or more) white spaces.<br />
      * The latter is a deprecated method because it leads to confusion and will be
-     * emoved in v2.<br />
+     * removed in v2.<br />
      * Additionally, it accepts additions and subtractions between different units.
      * Note that multiplications and divisions aren't supported.
      *
@@ -3638,12 +3638,12 @@
      * We can say it has "escaped the boundaries" — or just "escaped".<br />
      * In this case we need to decide whether the popper should either:
      *
-     * - detach from the reference and emain "trapped" in the boundaries, or
+     * - detach from the reference and remain "trapped" in the boundaries, or
      * - if it should ignore the boundary and "escape with its reference"
      *
      * When `escapeWithReference` is set to`true` and reference is completely
      * outside its boundaries, the popper will overflow (or completely leave)
-     * the boundaries in order to emain attached to the edge of the reference.
+     * the boundaries in order to remain attached to the edge of the reference.
      *
      * @memberof modifiers
      * @inner
@@ -3894,7 +3894,7 @@
    * @property {Object} data.styles Any CSS property defined here will be applied to the popper. It expects the JavaScript nomenclature (eg. `marginBottom`)
    * @property {Object} data.arrowStyles Any CSS property defined here will be applied to the popper arrow. It expects the JavaScript nomenclature (eg. `marginBottom`)
    * @property {Object} data.boundaries Offsets of the popper boundaries
-   * @property {Object} data.offsets The measuements of popper, reference and arrow elements
+   * @property {Object} data.offsets The measurements of popper, reference and arrow elements
    * @property {Object} data.offsets.popper `top`, `left`, `width`, `height` values
    * @property {Object} data.offsets.reference `top`, `left`, `width`, `height` values
    * @property {Object} data.offsets.arrow] `top` and `left` offsets, only one of them will be different from 0
@@ -3936,11 +3936,11 @@
     eventsEnabled: true,
 
     /**
-     * Set to true if you want to automatically emove the popper when
+     * Set to true if you want to automatically remove the popper when
      * you call the `destroy` method.
-     * @prop {Boolean} emoveOnDestroy=false
+     * @prop {Boolean} removeOnDestroy=false
      */
-    emoveOnDestroy: false,
+    removeOnDestroy: false,
 
     /**
      * Callback called when the popper is created.<br />
@@ -4093,7 +4093,7 @@
        * include `popper-utils.js` before `popper.js`.
        *
        * **DEPRECATION**: This way to access PopperUtils is deprecated
-       * and will be emoved in v2! Use the PopperUtils module directly instead.
+       * and will be removed in v2! Use the PopperUtils module directly instead.
        * Due to the high instability of the methods contained in Utils, we can't
        * guarantee them to follow semver. Use them at your own risk!
        * @static
@@ -4334,7 +4334,7 @@
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].emoveData(this._element, DATA_KEY$4);
+      $__default['default'].removeData(this._element, DATA_KEY$4);
       $__default['default'](this._element).off(EVENT_KEY$4);
       this._element = null;
       this._menu = null;
@@ -4505,7 +4505,7 @@
 
         if (hideEvent.isDefaultPrevented()) {
           continue;
-        } // If this is a touch-enabled device we emove the extra
+        } // If this is a touch-enabled device we remove the extra
         // empty mouseover listeners we added for iOS support
 
 
@@ -4519,8 +4519,8 @@
           context._popper.destroy();
         }
 
-        $__default['default'](dropdownMenu).emoveClass(CLASS_NAME_SHOW$2);
-        $__default['default'](parent).emoveClass(CLASS_NAME_SHOW$2).trigger($__default['default'].Event(EVENT_HIDDEN$1, relatedTarget));
+        $__default['default'](dropdownMenu).removeClass(CLASS_NAME_SHOW$2);
+        $__default['default'](parent).removeClass(CLASS_NAME_SHOW$2).trigger($__default['default'].Event(EVENT_HIDDEN$1, relatedTarget));
       }
     };
 
@@ -4803,7 +4803,7 @@
       this._setResizeEvent();
 
       $__default['default'](document).off(EVENT_FOCUSIN);
-      $__default['default'](this._element).emoveClass(CLASS_NAME_SHOW$3);
+      $__default['default'](this._element).removeClass(CLASS_NAME_SHOW$3);
       $__default['default'](this._element).off(EVENT_CLICK_DISMISS);
       $__default['default'](this._dialog).off(EVENT_MOUSEDOWN_DISMISS);
 
@@ -4824,11 +4824,11 @@
       /**
        * `document` has 2 events `EVENT_FOCUSIN` and `EVENT_CLICK_DATA_API`
        * Do not move `document` in `htmlElements` array
-       * It will emove `EVENT_CLICK_DATA_API` event that should emain
+       * It will remove `EVENT_CLICK_DATA_API` event that should remain
        */
 
       $__default['default'](document).off(EVENT_FOCUSIN);
-      $__default['default'].emoveData(this._element, DATA_KEY$5);
+      $__default['default'].removeData(this._element, DATA_KEY$5);
       this._config = null;
       this._element = null;
       this._dialog = null;
@@ -4873,7 +4873,7 @@
         var modalTransitionDuration = Util.getTransitionDurationFromElement(this._dialog);
         $__default['default'](this._element).off(Util.TRANSITION_END);
         $__default['default'](this._element).one(Util.TRANSITION_END, function () {
-          _this3._element.classList.emove(CLASS_NAME_STATIC);
+          _this3._element.classList.remove(CLASS_NAME_STATIC);
 
           if (!isModalOverflowing) {
             $__default['default'](_this3._element).one(Util.TRANSITION_END, function () {
@@ -4901,7 +4901,7 @@
 
       this._element.style.display = 'block';
 
-      this._element.emoveAttribute('aria-hidden');
+      this._element.removeAttribute('aria-hidden');
 
       this._element.setAttribute('aria-modal', true);
 
@@ -4992,14 +4992,14 @@
 
       this._element.setAttribute('aria-hidden', true);
 
-      this._element.emoveAttribute('aria-modal');
+      this._element.removeAttribute('aria-modal');
 
-      this._element.emoveAttribute('role');
+      this._element.removeAttribute('role');
 
       this._isTransitioning = false;
 
       this._showBackdrop(function () {
-        $__default['default'](document.body).emoveClass(CLASS_NAME_OPEN);
+        $__default['default'](document.body).removeClass(CLASS_NAME_OPEN);
 
         _this8._resetAdjustments();
 
@@ -5009,9 +5009,9 @@
       });
     };
 
-    _proto._emoveBackdrop = function _emoveBackdrop() {
+    _proto._removeBackdrop = function _removeBackdrop() {
       if (this._backdrop) {
-        $__default['default'](this._backdrop).emove();
+        $__default['default'](this._backdrop).remove();
         this._backdrop = null;
       }
     };
@@ -5061,10 +5061,10 @@
         var backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
         $__default['default'](this._backdrop).one(Util.TRANSITION_END, callback).emulateTransitionEnd(backdropTransitionDuration);
       } else if (!this._isShown && this._backdrop) {
-        $__default['default'](this._backdrop).emoveClass(CLASS_NAME_SHOW$3);
+        $__default['default'](this._backdrop).removeClass(CLASS_NAME_SHOW$3);
 
-        var callbackemove = function callbackemove() {
-          _this9._emoveBackdrop();
+        var callbackRemove = function callbackRemove() {
+          _this9._removeBackdrop();
 
           if (callback) {
             callback();
@@ -5074,9 +5074,9 @@
         if ($__default['default'](this._element).hasClass(CLASS_NAME_FADE$1)) {
           var _backdropTransitionDuration = Util.getTransitionDurationFromElement(this._backdrop);
 
-          $__default['default'](this._backdrop).one(Util.TRANSITION_END, callbackemove).emulateTransitionEnd(_backdropTransitionDuration);
+          $__default['default'](this._backdrop).one(Util.TRANSITION_END, callbackRemove).emulateTransitionEnd(_backdropTransitionDuration);
         } else {
-          callbackemove();
+          callbackRemove();
         }
       } else if (callback) {
         callback();
@@ -5144,7 +5144,7 @@
       var fixedContent = [].slice.call(document.querySelectorAll(SELECTOR_FIXED_CONTENT));
       $__default['default'](fixedContent).each(function (index, element) {
         var padding = $__default['default'](element).data('padding-right');
-        $__default['default'](element).emoveData('padding-right');
+        $__default['default'](element).removeData('padding-right');
         element.style.paddingRight = padding ? padding : '';
       }); // Restore sticky content
 
@@ -5153,12 +5153,12 @@
         var margin = $__default['default'](element).data('margin-right');
 
         if (typeof margin !== 'undefined') {
-          $__default['default'](element).css('margin-right', margin).emoveData('margin-right');
+          $__default['default'](element).css('margin-right', margin).removeData('margin-right');
         }
       }); // Restore body padding
 
       var padding = $__default['default'](document.body).data('padding-right');
-      $__default['default'](document.body).emoveData('padding-right');
+      $__default['default'](document.body).removeData('padding-right');
       document.body.style.paddingRight = padding ? padding : '';
     };
 
@@ -5168,7 +5168,7 @@
       scrollDiv.className = CLASS_NAME_SCROLLBAR_MEASURER;
       document.body.appendChild(scrollDiv);
       var scrollbarWidth = scrollDiv.getBoundingClientRect().width - scrollDiv.clientWidth;
-      document.body.emoveChild(scrollDiv);
+      document.body.removeChild(scrollDiv);
       return scrollbarWidth;
     } // Static
     ;
@@ -5361,7 +5361,7 @@
       var elName = el.nodeName.toLowerCase();
 
       if (whitelistKeys.indexOf(el.nodeName.toLowerCase()) === -1) {
-        el.parentNode.emoveChild(el);
+        el.parentNode.removeChild(el);
         return "continue";
       }
 
@@ -5369,7 +5369,7 @@
       var whitelistedAttributes = [].concat(whiteList['*'] || [], whiteList[elName] || []);
       attributeList.forEach(function (attr) {
         if (!allowedAttribute(attr, whitelistedAttributes)) {
-          el.emoveAttribute(attr.nodeName);
+          el.removeAttribute(attr.nodeName);
         }
       });
     };
@@ -5538,12 +5538,12 @@
 
     _proto.dispose = function dispose() {
       clearTimeout(this._timeout);
-      $__default['default'].emoveData(this.element, this.constructor.DATA_KEY);
+      $__default['default'].removeData(this.element, this.constructor.DATA_KEY);
       $__default['default'](this.element).off(this.constructor.EVENT_KEY);
       $__default['default'](this.element).closest('.modal').off('hide.bs.modal', this._hideModalHandler);
 
       if (this.tip) {
-        $__default['default'](this.tip).emove();
+        $__default['default'](this.tip).remove();
       }
 
       this._isEnabled = null;
@@ -5645,12 +5645,12 @@
 
       var complete = function complete() {
         if (_this2._hoverState !== HOVER_STATE_SHOW && tip.parentNode) {
-          tip.parentNode.emoveChild(tip);
+          tip.parentNode.removeChild(tip);
         }
 
         _this2._cleanTipClass();
 
-        _this2.element.emoveAttribute('aria-describedby');
+        _this2.element.removeAttribute('aria-describedby');
 
         $__default['default'](_this2.element).trigger(_this2.constructor.Event.HIDDEN);
 
@@ -5669,7 +5669,7 @@
         return;
       }
 
-      $__default['default'](tip).emoveClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we emove the extra
+      $__default['default'](tip).removeClass(CLASS_NAME_SHOW$4); // If this is a touch-enabled device we remove the extra
       // empty mouseover listeners we added for iOS support
 
       if ('ontouchstart' in document.documentElement) {
@@ -5713,7 +5713,7 @@
     _proto.setContent = function setContent() {
       var tip = this.getTipElement();
       this.setElementContent($__default['default'](tip.querySelectorAll(SELECTOR_TOOLTIP_INNER)), this.getTitle());
-      $__default['default'](tip).emoveClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$4);
+      $__default['default'](tip).removeClass(CLASS_NAME_FADE$2 + " " + CLASS_NAME_SHOW$4);
     };
 
     _proto.setElementContent = function setElementContent($element, content) {
@@ -5988,7 +5988,7 @@
       var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX);
 
       if (tabClass !== null && tabClass.length) {
-        $tip.emoveClass(tabClass.join(''));
+        $tip.removeClass(tabClass.join(''));
       }
     };
 
@@ -6008,7 +6008,7 @@
         return;
       }
 
-      $__default['default'](tip).emoveClass(CLASS_NAME_FADE$2);
+      $__default['default'](tip).removeClass(CLASS_NAME_FADE$2);
       this.config.animation = false;
       this.hide();
       this.show();
@@ -6178,7 +6178,7 @@
       }
 
       this.setElementContent($tip.find(SELECTOR_CONTENT), content);
-      $tip.emoveClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$5);
+      $tip.removeClass(CLASS_NAME_FADE$3 + " " + CLASS_NAME_SHOW$5);
     } // Private
     ;
 
@@ -6191,7 +6191,7 @@
       var tabClass = $tip.attr('class').match(BSCLS_PREFIX_REGEX$1);
 
       if (tabClass !== null && tabClass.length > 0) {
-        $tip.emoveClass(tabClass.join(''));
+        $tip.removeClass(tabClass.join(''));
       }
     } // Static
     ;
@@ -6365,7 +6365,7 @@
           var targetBCR = target.getBoundingClientRect();
 
           if (targetBCR.width || targetBCR.height) {
-            // TODO (fat): emove sketch reliance on jQuery position/offset
+            // TODO (fat): remove sketch reliance on jQuery position/offset
             return [$__default['default'](target)[offsetMethod]().top + offsetBase, targetSelector];
           }
         }
@@ -6383,7 +6383,7 @@
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].emoveData(this._element, DATA_KEY$8);
+      $__default['default'].removeData(this._element, DATA_KEY$8);
       $__default['default'](this._scrollElement).off(EVENT_KEY$8);
       this._element = null;
       this._scrollElement = null;
@@ -6497,7 +6497,7 @@
       [].slice.call(document.querySelectorAll(this._selector)).filter(function (node) {
         return node.classList.contains(CLASS_NAME_ACTIVE$2);
       }).forEach(function (node) {
-        return node.classList.emove(CLASS_NAME_ACTIVE$2);
+        return node.classList.remove(CLASS_NAME_ACTIVE$2);
       });
     } // Static
     ;
@@ -6672,7 +6672,7 @@
     };
 
     _proto.dispose = function dispose() {
-      $__default['default'].emoveData(this._element, DATA_KEY$9);
+      $__default['default'].removeData(this._element, DATA_KEY$9);
       this._element = null;
     } // Private
     ;
@@ -6690,7 +6690,7 @@
 
       if (active && isTransitioning) {
         var transitionDuration = Util.getTransitionDurationFromElement(active);
-        $__default['default'](active).emoveClass(CLASS_NAME_SHOW$6).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
+        $__default['default'](active).removeClass(CLASS_NAME_SHOW$6).one(Util.TRANSITION_END, complete).emulateTransitionEnd(transitionDuration);
       } else {
         complete();
       }
@@ -6698,11 +6698,11 @@
 
     _proto._transitionComplete = function _transitionComplete(element, active, callback) {
       if (active) {
-        $__default['default'](active).emoveClass(CLASS_NAME_ACTIVE$3);
+        $__default['default'](active).removeClass(CLASS_NAME_ACTIVE$3);
         var dropdownChild = $__default['default'](active.parentNode).find(SELECTOR_DROPDOWN_ACTIVE_CHILD)[0];
 
         if (dropdownChild) {
-          $__default['default'](dropdownChild).emoveClass(CLASS_NAME_ACTIVE$3);
+          $__default['default'](dropdownChild).removeClass(CLASS_NAME_ACTIVE$3);
         }
 
         if (active.getAttribute('role') === 'tab') {
@@ -6861,7 +6861,7 @@
       }
 
       var complete = function complete() {
-        _this._element.classList.emove(CLASS_NAME_SHOWING);
+        _this._element.classList.remove(CLASS_NAME_SHOWING);
 
         _this._element.classList.add(CLASS_NAME_SHOW$7);
 
@@ -6874,7 +6874,7 @@
         }
       };
 
-      this._element.classList.emove(CLASS_NAME_HIDE);
+      this._element.classList.remove(CLASS_NAME_HIDE);
 
       Util.reflow(this._element);
 
@@ -6907,11 +6907,11 @@
       this._clearTimeout();
 
       if (this._element.classList.contains(CLASS_NAME_SHOW$7)) {
-        this._element.classList.emove(CLASS_NAME_SHOW$7);
+        this._element.classList.remove(CLASS_NAME_SHOW$7);
       }
 
       $__default['default'](this._element).off(EVENT_CLICK_DISMISS$1);
-      $__default['default'].emoveData(this._element, DATA_KEY$a);
+      $__default['default'].removeData(this._element, DATA_KEY$a);
       this._element = null;
       this._config = null;
     } // Private
@@ -6940,7 +6940,7 @@
         $__default['default'](_this3._element).trigger(EVENT_HIDDEN$4);
       };
 
-      this._element.classList.emove(CLASS_NAME_SHOW$7);
+      this._element.classList.remove(CLASS_NAME_SHOW$7);
 
       if (this._config.animation) {
         var transitionDuration = Util.getTransitionDurationFromElement(this._element);

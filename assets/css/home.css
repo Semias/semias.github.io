@@ -711,7 +711,7 @@ z-index: -1;
 .footer__social .icon-instagram,
 .footer__social .icon-facebook {
   color: #fff;
-  font-size: 1.35em;
+  font-size: 1.35rem;
 }
 
 .footer__social ul li a {
@@ -828,17 +828,6 @@ z-index: -1;
   height: auto;
   grid-row: 2;
   grid-column: 1/13;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.policy__info_content-box {
-  width: 40%;
-  margin-bottom: ;
-}
-
-.policy__info_content-box h1 {
-  margin-bottom: 0;
 }
 
 /* SMALL TABLET STYLES */
