@@ -355,7 +355,6 @@ a:hover {
   left: 0;
   font-size: 2em;
 }
-
 .quote p::after {
   color: #fff;
   content: '"';
@@ -469,7 +468,6 @@ a:hover {
   background: #fff;
   transition: 0.3s;
 }
-
 .teaser_text--button a:hover::after {
 width: 100%;
 z-index: -1;
@@ -513,17 +511,14 @@ z-index: -1;
   filter: grayscale(0);
   transition: 0.8s;
 }
-
 .design__teaser_pictures ul li:nth-child(1) img {
   width: 850px;
   transform: translate(-31%, 0px);
 }
-
 .design__teaser_pictures ul li:nth-child(2) img {
   width: 601px;
   transform: translate(-24%, 0px);
 }
-
 .design__teaser_pictures ul li:nth-child(3) img {
   width: 1200px;
   transform: translate(-34%, 0px);
