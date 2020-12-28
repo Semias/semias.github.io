@@ -2,7 +2,6 @@ window.addEventListener(
   "load",
   function () {
 
-
     //Responsive Menu
     let resp = document.querySelector(".responsive__menu");
     let respChilds = document.querySelector(".menu");
@@ -18,20 +17,6 @@ window.addEventListener(
     resp.addEventListener("click", function () {
       respChilds.classList.toggle("active");
     });
-
-
-
-
-
-    //Photogallery
-    let modal
-
-
-
-
-
-
-
 
     //Datenschutzerklärung Open
     let datenschutz = document.querySelectorAll(".footer__policy ul li");
@@ -51,13 +36,9 @@ window.addEventListener(
         policy.classList.remove("open");
       });
     });
-
-
-
   },
   false
 );
-
 
 //jQuery Part
 

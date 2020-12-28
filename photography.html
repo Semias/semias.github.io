@@ -40,74 +40,258 @@
     </header>
 
     <section class="section__gallery grid_gallery">
-          <div class="gallery__element" id="barcelona">
-            <div class="gallery__element_teaser">
-              <img src="/assets/img/barcelona/barcelona01.jpg" />
-            <h1>Barcelona | March 2019</h1>
+
+      <div class="gallery__element">
+        <div class="gallery__element_teaser" onclick="openModal('gti__modal', 'gti__modal_items')">
+          <img src="/assets/img/gti/gti01.jpg" />
+        <h1>GTI<br><span>Aug | 2020</span></h1>
+        </div>
+        <div class="gallery__modal" id="gti__modal">
+          <div class="modal_close" onclick="closeModal('gti__modal', event.stopPropagation())">X</div>
+          <div class="modal_slider" id="gti__modal_items">
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti01.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti02.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti03.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti04.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti05.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti06.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti07.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/gti/gti08.jpg" alt=""></div>
+          </div>
+          <div class="slider_controls">
+            <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+            <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+          </div>
+        </div>
+      </div> 
+
+
+      <div class="gallery__element">
+        <div class="gallery__element_teaser" onclick="openModal('burg__modal', 'burg__modal_items')">
+          <img src="/assets/img/burg/friends_burg01.jpg" />
+        <h1>Friends<br><span>Jun | 2020</span></h1>
+        </div>
+        <div class="gallery__modal" id="burg__modal">
+          <div class="modal_close" onclick="closeModal('burg__modal', event.stopPropagation())">X</div>
+          <div class="modal_slider" id="burg__modal_items">
+            <div class="modal_slider-item"><img src="/assets/img/burg/friends_burg01.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/burg/friends_burg02.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/burg/friends_burg03.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/burg/friends_burg04.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/burg/friends_burg05.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/burg/friends_burg06.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/burg/friends_burg07.jpg" alt=""></div>
+          </div>
+          <div class="slider_controls">
+            <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+            <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+          </div>
+        </div>
+      </div> 
+
+
+      <div class="gallery__element">
+        <div class="gallery__element_teaser" onclick="openModal('autumm__modal', 'autumm__modal_items')">
+          <img src="/assets/img/autumm/autumm01.jpg" />
+        <h1>Autumm<br><span>Nov | 2019</span></h1>
+        </div>
+        <div class="gallery__modal" id="autumm__modal">
+          <div class="modal_close" onclick="closeModal('autumm__modal', event.stopPropagation())">X</div>
+          <div class="modal_slider" id="autumm__modal_items">
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm01.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm02.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm03.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm04.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm05.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm06.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm07.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm08.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/autumm/autumm09.jpg" alt=""></div>
+          </div>
+          <div class="slider_controls">
+            <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+            <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+          </div>
+        </div>
+      </div> 
+
+      <div class="gallery__element">
+        <div class="gallery__element_teaser" onclick="openModal('workplace__modal', 'workplace__modal_items')">
+          <img src="/assets/img/workplace/setup01.jpg" />
+        <h1>Workplace<br><span>Oct | 2019</span></h1>
+        </div>
+        <div class="gallery__modal" id="workplace__modal">
+          <div class="modal_close" onclick="closeModal('workplace__modal', event.stopPropagation())">X</div>
+          <div class="modal_slider" id="workplace__modal_items">
+            <div class="modal_slider-item"><img src="/assets/img/workplace/setup01.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/workplace/setup02.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/workplace/setup03.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/workplace/setup04.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/workplace/setup05.jpg" alt=""></div>
+            <div class="modal_slider-item"><img src="/assets/img/workplace/setup06.jpg" alt=""></div>
+          </div>
+          <div class="slider_controls">
+            <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+            <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+          </div>
+        </div>
+      </div> 
+
+          <div class="gallery__element">
+            <div class="gallery__element_teaser" onclick="openModal('koenigssee__modal', 'koenigssee__modal_items')">
+              <img src="/assets/img/Chiemsee-Koenigssee/koenigssee01.jpg" />
+            <h1>Chiemsee/Königssee<br><span>Mar | 2019</span></h1>
             </div>
-            <div class="gallery__modal">
-              <div class="modal_close">X</div>
-              <div class="modal_slider">
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
+            <div class="gallery__modal" id="koenigssee__modal">
+              <div class="modal_close" onclick="closeModal('koenigssee__modal', event.stopPropagation())">X</div>
+              <div class="modal_slider" id="koenigssee__modal_items">
+                <div class="modal_slider-item"><img src="/assets/img/Chiemsee-Koenigssee/koenigssee01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Chiemsee-Koenigssee/koenigssee02.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Chiemsee-Koenigssee/koenigssee03.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Chiemsee-Koenigssee/koenigssee04.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Chiemsee-Koenigssee/chiemsee01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Chiemsee-Koenigssee/chiemsee02.jpg" alt=""></div>
               </div>
               <div class="slider_controls">
-              <div class="control-left"><</div>
-              <div class="control-right">></div>
+                <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+                <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+              </div>
             </div>
-            </div>
-            </div>
-          </div>
+          </div> 
 
-          <div class="gallery__element" id="Mannheim">
-            <div class="gallery__element_teaser">
+          <div class="gallery__element">
+            <div class="gallery__element_teaser" onclick="openModal('mannheim__modal', 'mannheim__modal_items')">
               <img src="/assets/img/Mannheim/mannheim01.jpg" />
-              <h1>Mannheim | April 2019</h1>
+              <h1>Mannheim<br><span>Mar | 2019</span></h1>
             </div>
-            <div class="gallery__modal">
-              <div class="modal_close">X</div>
-              <div class="modal_slider">
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
+            <div class="gallery__modal" id="mannheim__modal">
+              <div class="modal_close" onclick="closeModal('mannheim__modal', event.stopPropagation())">X</div>
+              <div class="modal_slider" id="mannheim__modal_items">
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim02.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim03.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim04.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim05.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim06.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim07.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/Mannheim/mannheim08.jpg" alt=""></div>
               </div>
               <div class="slider_controls">
-              <div class="control-left"><</div>
-              <div class="control-right">></div>
-            </div>
-            </div>
+                <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+                <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+              </div>
             </div>
           </div>
 
-          <div class="gallery__element" id="">
-            <div class="gallery__element_teaser">
-              <img src="/assets/img/Chiemsee-Koenigssee/chiemsee01.jpg" />
-              <h1>Königssee | October 2019</h1>
+
+          <div class="gallery__element">
+            <div class="gallery__element_teaser" onclick="openModal('heidelberg__modal', 'heidelberg__modal_items')">
+              <img src="/assets/img/heidelberg/heidelberg01.jpg" />
+              <h1>Heidelberg<br><span>Apr | 2019</span></h1>
             </div>
-            <div class="gallery__modal">
-              <div class="modal_close">X</div>
-              <div class="modal_slider">
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
-                <div><img src="" alt=""></div>
+            <div class="gallery__modal" id="heidelberg__modal">
+              <div class="modal_close" onclick="closeModal('heidelberg__modal')">X</div>
+              <div class="modal_slider" id="heidelberg__modal_items">
+                <div class="modal_slider-item"><img src="/assets/img/heidelberg/heidelberg01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/heidelberg/heidelberg02.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/heidelberg/heidelberg03.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/heidelberg/heidelberg04.jpg" alt=""></div>
               </div>
               <div class="slider_controls">
-              <div class="control-left"><</div>
-              <div class="control-right">></div>
-            </div>
-            </div>
+                <div class="control-left" onclick="nextSlide(-1)"><</div>
+                <div class="control-right" onclick="nextSlide(1)">></div>
+              </div>
             </div>
           </div>
+
+
+          <div class="gallery__element">
+            <div class="gallery__element_teaser" onclick="openModal('barcelona__modal', 'barcelona__modal_items')">
+              <img src="/assets/img/barcelona/barcelona04.jpg" />
+              <h1>Barcelona<br><span>Mar | 2019</span></h1>
+            </div>
+            <div class="gallery__modal" id="barcelona__modal">
+              <div class="modal_close" onclick="closeModal('barcelona__modal')">X</div>
+              <div class="modal_slider" id="barcelona__modal_items">
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona04.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona02.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona03.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona05.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona06.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona07.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona08.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona09.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona10.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona11.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/barcelona/barcelona12.jpg" alt=""></div>
+              </div>
+              <div class="slider_controls">
+                <div class="control-left" onclick="nextSlide(-1)"><</div>
+                <div class="control-right" onclick="nextSlide(1)">></div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="gallery__element">
+            <div class="gallery__element_teaser" onclick="openModal('munster__modal', 'munster__modal_items')">
+              <img src="/assets/img/muenster/meunster01.jpg"/>
+            <h1>Münster<br><span>Aug | 2018</span></h1>
+            </div>
+            <div class="gallery__modal" id="munster__modal">
+              <div class="modal_close" onclick="closeModal('munster__modal', event.stopPropagation())">X</div>
+              <div class="modal_slider" id="munster__modal_items">
+                <div class="modal_slider-item"><img src="/assets/img/muenster/meunster01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/muenster/meunster02.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/muenster/meunster03.jpg" alt=""></div>
+              </div>
+              <div class="slider_controls">
+                <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+                <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+              </div>
+            </div>
+          </div> 
+
+          <div class="gallery__element">
+            <div class="gallery__element_teaser" onclick="openModal('bulgaria__modal', 'bulgaria__modal_items')">
+              <img src="/assets/img/bulgarien/bulgarien03.jpg"/>
+            <h1>Bulgaria<br><span>May | 2018</span></h1>
+            </div>
+            <div class="gallery__modal" id="bulgaria__modal">
+              <div class="modal_close" onclick="closeModal('bulgaria__modal', event.stopPropagation())">X</div>
+              <div class="modal_slider" id="bulgaria__modal_items">
+                <div class="modal_slider-item"><img src="/assets/img/bulgarien/bulgarien03.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/bulgarien/bulgarien01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/bulgarien/bulgarien02.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/bulgarien/bulgarien04.jpg" alt=""></div>
+              </div>
+              <div class="slider_controls">
+                <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+                <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+              </div>
+            </div>
+          </div> 
+          
+          <div class="gallery__element">
+            <div class="gallery__element_teaser" onclick="openModal('aalen__modal', 'aalen__modal_items')">
+              <img src="/assets/img/aalen/aalen01.jpg" />
+            <h1>Aalen<br><span>Apr | 2018</span></h1>
+            </div>
+            <div class="gallery__modal" id="aalen__modal">
+              <div class="modal_close" onclick="closeModal('aalen__modal', event.stopPropagation())">X</div>
+              <div class="modal_slider" id="aalen__modal_items">
+                <div class="modal_slider-item"><img src="/assets/img/aalen/aalen01.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/aalen/aalen02.jpg" alt=""></div>
+                <div class="modal_slider-item"><img src="/assets/img/aalen/aalen03.jpg" alt=""></div>
+              </div>
+              <div class="slider_controls">
+                <div class="control-left" onclick="nextSlide(-1), event.stopPropagation()"><</div>
+                <div class="control-right" onclick="nextSlide(1), event.stopPropagation()">></div>
+              </div>
+            </div>
+          </div> 
+
     </section>
     <footer class="footer grid">
       <div class="footer__social">
