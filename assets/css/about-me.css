@@ -516,6 +516,7 @@ transition: transform 300ms ease-in-out;
   align-items: center; 
   grid-column: 6/8;
   margin-bottom: 2em;
+  border-radius: 50px;
 }
 
 .policy__info_close span {
@@ -572,6 +573,7 @@ transition: transform 300ms ease-in-out;
 }
 .policy__info_content {
   border: 1px solid #fff;
+  border-radius: 50px;
 }
 .policy__info_content-box {
   width: 75%;

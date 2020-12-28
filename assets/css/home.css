@@ -56,9 +56,6 @@
 .icon-print:before {
   content: "\e900";
 }
-.icon-facebook:before {
-  content: "\e901";
-}
 .icon-arrow:before {
   content: "\e902";
 }
@@ -670,12 +667,6 @@ z-index: -1;
   height: 45px;
 }
 
-.footer__social .facebook:hover {
-  transition: 0.3s;
-  border-radius: 50%;
-  background: #1778f2;
-}
-
 .footer__social .instagram:hover {
   transition: 0.3s;
   border-radius: 50%;
@@ -703,8 +694,7 @@ z-index: -1;
 
 .footer__social .icon-behance,
 .footer__social .icon-dribble,
-.footer__social .icon-instagram,
-.footer__social .icon-facebook {
+.footer__social .icon-instagram {
   color: #fff;
   font-size: 1.35rem;
 }
@@ -804,6 +794,7 @@ z-index: -1;
   display: flex;
   justify-content: center;
   align-items: center; 
+  border-radius: 50px;
   grid-column: 6/8;
   margin-bottom: 2em;
 }
@@ -871,6 +862,7 @@ z-index: -1;
 
 .policy__info_content {
   border: 1px solid #fff;
+  border-radius: 50px;
 }
 .policy__info_content-box {
   width: 75%;
