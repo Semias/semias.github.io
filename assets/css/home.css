@@ -373,9 +373,6 @@ a:hover {
   grid-column: 1/13;
 }
 
-.photography__teaser_pictures ul {
-}
-
 .photography__teaser_pictures ul li {
   height: 45px;
   filter: grayscale(1);
@@ -537,7 +534,7 @@ z-index: -1;
 }
 
 #design__teaser_3 {
-  background: url(../img/design/calendar.jpg) center center no-repeat;
+  background: url(../img/design/calendar/calendar01.jpg) center center no-repeat;
   background-size: cover;
 }
 
@@ -1015,7 +1012,7 @@ h1 {
 }
 
 #design__teaser_3 {
-  background: url(../img/design/calendar.jpg) center center no-repeat;
+  background: url(../img/design/calendar/calendar01.jpg) center center no-repeat;
   background-size: 610%;
 }
 
@@ -1232,7 +1229,7 @@ background-size: 365%;
 }
 
 #design__teaser_3 {
-background: url(../img/design/calendar.jpg) center center no-repeat;
+background: url(../img/design/calendar/calendar01.jpg) center center no-repeat;
 background-size: 630%;
 }
 
