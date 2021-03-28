@@ -56,14 +56,14 @@ jQuery(document).ready(function ($) {
       });
     });
 
-    $(function () {
-      $(".footer__policy ul li").click(function () {
-        setTimeout(function () {
-          $("html, body").animate({
-            scrollTop: $(window).scrollTop() + 900,
-          });
-        }, 200);
-      });
-    });
+    // $(function () {
+    //   $(".footer__policy ul li").click(function () {
+    //     setTimeout(function () {
+    //       $("html, body").animate({
+    //         scrollTop: $(window).scrollTop() + 900,
+    //       });
+    //     }, 200);
+    //   });
+    // });
   });
 });
