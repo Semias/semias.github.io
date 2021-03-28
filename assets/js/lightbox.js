@@ -9,11 +9,6 @@ function openModal(modalName, myModalItems) {
     nextSlide(0);
 }
 
-function closeModal(modalName) {
-    document.getElementById(modalName).classList.remove('open');    //Schließt das Pop-Up
-    myItems = null; 
-}
-
 function nextSlide(index) {
     const formerItemIndex = currentItemIndex;
     currentItemIndex += index
@@ -21,9 +16,15 @@ function nextSlide(index) {
         currentItemIndex = 0; //diese Zeile springt zum ersten Bild zurück (Karusell)
     } else if(currentItemIndex < 0) {
         currentItemIndex = myItems.children.length - 1 // vom ersten zum letzten
-    }
-    myItems.children[formerItemIndex].classList.remove('active')
-    myItems.children[currentItemIndex].classList.add('active')
+    };
+    myItems.children[formerItemIndex].classList.remove('active');
+    myItems.children[currentItemIndex].classList.add('active');
+}
+
+function closeModal(modalName) {
+  document.getElementById(modalName).classList.remove('open');    //Schließt das Pop-Up
+  myItems.children[currentItemIndex].classList.remove('active');
+  myItems = null; 
 }
 
 //Modal
