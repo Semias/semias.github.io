@@ -18,10 +18,7 @@
     <link type="text/css" href="assets/css/home.css" rel="stylesheet" />
     <link type="text/css" href="assets/css/aos.css" rel="stylesheet" />
     <script type="text/javascript" src="assets/js/jquery-3.5.1.min.js"></script>
-    <script
-      type="text/javascript"
-      src="bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"
-    ></script>
+    <script type="text/javascript" src="bootstrap-4.5.3-dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript" src="assets/js/home.js"></script>
     <script type="text/javascript" src="assets/js/aos.js"></script>
   </head>
@@ -29,7 +26,7 @@
   <body>
     <header class="header grid">
       <div class="header__logo" data-aos="fade-right">
-        <img src="assets/img/logo.svg" />
+        <img src="assets/img/logo.svg"/>
       </div>
       <div class="responsive__menu" data-aos="fade-left">
         <ul>
@@ -43,9 +40,9 @@
         <li>
           <a href="design.html">Design</a>
         </li>
-        <li>
+        <!-- <li>
           <a href="about-me.html">About me</a>
-        </li>
+        </li> -->
       </ul>
     </header>
 
@@ -77,7 +74,7 @@
       </div>
     </div>
 
-    <section class="quote grid">
+    <section class="aboutMe grid">
       <p>
         "When you photograph people in color, you photograph their clothes.<br />But
         when you photograph people in black and white you photograph their
@@ -131,20 +128,6 @@
         </ul>
       </div>
     </section>
-    <section class="about grid" data-aos="fade-down">
-      <div class="about__teaser_text">
-        <h1>About me</h1>
-        <p>
-          So what about me? Maybe you are interested in what is my daylie
-          motivation and what keeps me running to be excited about new
-          things.<br />
-          Check out my story!
-        </p>
-        <div class="about__teaser_text--button">
-          <a href="about-me.html">More</a>
-        </div>
-      </div>
-    </section>
 
     <footer class="footer grid">
       <div class="footer__social">
@@ -171,74 +154,66 @@
       </div>
       <div class="footer__policy">
         <ul>
-          <li>Impressum</li>
-          <li>Datenschutzerklärung</li>
+          <li><a class="notice" data-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseInfo">Privacy Policy</a></li>
+          <li><a class="policy" data-toggle="collapse" href="#collapseInfo" role="button" aria-expanded="false" aria-controls="collapseInfo">Legal Notice</a></li>
         </ul>
       </div>
     </footer>
-    <section class="policy__info grid">
-      <div class="policy__info_close">
+    <section class="policy__info grid collapse" id="collapseInfo">
+      <!-- <div class="policy__info_close" data-toggle="collapse">
         <span>X</span>
-      </div>
+      </div> -->
+      <button class="policy__info_close" type="button" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="false" aria-controls="collapseInfo">
+        X
+      </button>
       <div class="policy__info_content">
         <div class="policy__info_content-box">
-          <h1>Legal Disclosure</h1>
-          Information in accordance with Section 5 TMG
-          <br /><br />Meinelstraße 8<br />73479 Ellwangen<br/>
-          <h2>Contact Information</h2>
-          Telephone: 01758335942<br />E-Mail:
-          <a href="mailto:stefan.gall08@gmail.com">stefan.gall08@gmail.com</a
-          ><br />Internet address:
-          <a href="semias.github.io" target="_blank">semias.github.io</a
-          ><br /><br />
-          <h2>Disclaimer</h2>
-          Accountability for content<br />
-          The contents of our pages have been created with the utmost care.
-          However, we cannot guarantee the contents' accuracy, completeness or
-          topicality. According to statutory provisions, we are furthermore
-          responsible for our own content on these web pages. In this matter,
-          please note that we are not obliged to monitor the transmitted or
-          saved information of third parties, or investigate circumstances
-          pointing to illegal activity. Our obligations to remove or block the
-          use of information under generally applicable laws remain unaffected
-          by this as per §§ 8 to 10 of the Telemedia Act (TMG).
+          <h1>Privacy Policy</h1>
+          <h2>Introduction</h2>
+          <p>With the following data protection declaration, we would like to inform you about the types of your personal data (hereinafter also referred to as "data" for short) that we process, for what purposes and to what extent. The privacy policy applies to all processing of personal data carried out by us, both in the context of the provision of our services and in particular on our websites, in mobile applications and within external online presences, such as our social media profiles (hereinafter collectively referred to as "Online Offerings").</p>
+          <p>The terms used are not gender-specific.</p>
+          <p>As of 29. March 2021</p><h2>Content Overview</h2> <ul class="index"><li><a class="index-link" href="#m14">Introduction</a></li><li><a class="index-link" href="#m3">Responsible</a></li><li><a class="index- link" href="#mOverview">Overview of processing operations</a></li><li><a class="index-link" href="#m13">Applicable legal bases</a></li><li><a class="index-link" href="#m27">Security measures</a></li><li><a class="index- link" href="#m225">Provision of the online offer and web hosting</a></li><li><a class="index-link" href="#m328">Plugins and embedded functions as well as content</a></li><li><a class="index- link" href="#m15">Change and update privacy policy</a></li><li><a class="index-link" href="#m10">Rights of data subjects</a></li></ul><h2 id="m3">Responsible</h2><p>Stefan Gall<br>Meinelstr. 8<br>73479 Ellwangen<br>Germany</p>
+          <p>Email address: <a href="mailto:stefan.gall08@gmail.com">stefan.gall08@gmail.com.</a></p>
+          <h2 id="mOverview">Overview of processing</h2><p>The following overview summarizes the types of data processed and the purposes of their processing, and refers to the data subjects.</p><h3>Types of data processed.</h3>
+          <ul><li>Content data (e.g. input in online forms).</li><li>Meta/communication data (e.g. device information, IP addresses).</li><li>Use data (e.g. websites visited, interest in content, access times).</li></ul><h3>Categories of data subjects</h3><ul><li>Users (e.g. website visitors, users of online services). </li></ul><h3>Purposes of processing</h3><ul><li>Provision of our online offer and user-friendliness.</li><li>Provision of contractual services and customer service.</li></ul><h3 id="m13">Relevant legal bases</h3><p>The following is an overview of the legal bases of the GDPR on the basis of which we process personal data. Please note that in addition to the provisions of the GDPR, national data protection regulations may apply in your or our country of residence or domicile. Furthermore, should more specific legal bases be decisive in individual cases, we will inform you of these in the data protection declaration.</p>
+           <ul><li><strong>Rightful interests (Art. 6 para. 1 p. 1 lit. f. DSGVO)</strong> - Processing is necessary to protect the legitimate interests of the controller or a third party, unless such interests are overridden by the interests or fundamental rights and freedoms of the data subject which require the protection of personal data.</li></ul><p><strong>National data protection regulations in Germany</strong>: In addition to the data protection regulations of the General Data Protection Regulation, national regulations on data protection in Germany apply. These include, in particular, the Act on Protection against Misuse of Personal Data in Data Processing (Federal Data Protection Act - BDSG). In particular, the BDSG contains special regulations on the right to information, the right to erasure, the right to object, the processing of special categories of personal data, processing for other purposes and transmission, as well as automated decision-making in individual cases, including profiling. Furthermore, it regulates data processing for employment purposes (Section 26 BDSG), in particular with regard to the establishment, implementation or termination of employment relationships as well as the consent of employees. Furthermore, state data protection laws of the individual federal states may apply.</p>
+           <h2 id="m27">Security measures</h2><p>We take appropriate technical and organizational measures to ensure a level of protection appropriate to the risk, in accordance with the law, taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of the processing, as well as the various probabilities of occurrence and the level of risk to the rights and freedoms of natural persons.</p>
+           <p>Measures include, in particular, ensuring the confidentiality, integrity, and availability of data by controlling physical and electronic access to data as well as access to, entry into, disclosure of, assurance of availability of, and segregation of data concerning them. Furthermore, we have established procedures to ensure the exercise of data subjects' rights, the deletion of data, and responses to data compromise. Furthermore, we take the protection of personal data into account as early as the development or selection of hardware, software as well as procedures in accordance with the principle of data protection, through technology design and through data protection-friendly default settings.</p>
+           <p><strong>SSL encryption (https)</strong>: To protect your data transmitted via our online offer, we use SSL encryption. You can recognize such encrypted connections by the prefix https:// in the address line of your browser.</p>
+           <h2 id="m225">Provision of the online offer and web hosting</h2><p>In order to be able to provide our online offer securely and efficiently, we use the services of one or more web hosting providers from whose servers (or servers managed by them) the online offer can be accessed. For these purposes, we may use infrastructure and platform services, computing capacity, storage space and database services as well as security services and technical maintenance services.</p>
+           <p>The data processed in the course of providing the hosting service may include all information relating to the users of our online service, which is generated in the course of use and communication. This regularly includes the IP address, which is necessary to be able to deliver the content of online offers to browsers, and all entries made within our online offer or from websites.</p>
+           <p><strong>Collection of access data and log files</strong>: We ourselves (or our web hosting provider) collect data on each access to the server (so-called server log files). The server log files may include the address and name of the web pages and files accessed, date and time of access, data volumes transferred, notification of successful access, browser type and version, the user's operating system, referrer URL (the previously visited page) and, as a rule, IP addresses and the requesting provider.</p>
+           <p>The server log files can be used on the one hand for security purposes, e.g. to avoid overloading the servers (especially in the case of abusive attacks, so-called DDoS attacks), and on the other hand to ensure the utilization of the servers and their stability.</p>
+           <ul class="m-elements"><li><strong>Types of data processed:</strong> Content data (e.g. entries in online forms), usage data (e.g. websites visited, interest in content, access times), meta/communication data (e.g. device information, IP addresses).</li><li><strong>People concerned:</strong> Users (e.g. website visitors, users of online services). </li><li><strong>Purposes of processing:</strong> Provision of our online offer and user experience.</li><li><strong>Legal basis:</strong> Legitimate interests (Art. 6 para. 1 p. 1 lit. f. DSGVO). </li></ul><h2 id="m328">Plugins and embedded functions and content</h2><p>We include in our online offer functional and content elements that are obtained from the servers of their respective providers (hereinafter referred to as "third-party providers"). These may be, for example, graphics, videos or city maps (hereinafter uniformly referred to as "content").</p>
+          
+           <p>The integration always requires that the third-party providers of this content process the IP address of the user, since without the IP address they could not send the content to their browser. The IP address is thus required for the presentation of these contents or functions. We strive to use only such content whose respective providers use the IP address only for the delivery of the content. Third-party providers may also use so-called pixel tags (invisible graphics, also known as "web beacons") for statistical or marketing purposes. The "pixel tags" can be used to analyze information such as visitor traffic on the pages of this website. The pseudonymous information may also be stored in cookies on the user's device and may contain, among other things, technical information about the browser and operating system, referring websites, time of visit and other information about the use of our online offer as well as be linked to such information from other sources.</p>
+          <p><strong>Notes on legal bases:</strong> Insofar as we ask users for their consent to the use of third-party providers, the legal basis for the processing of data is consent. Otherwise, users' data is processed on the basis of our legitimate interests (i.e. interest in efficient, economical and recipient-friendly services). In this context, we would also like to refer you to the information on the use of cookies in this privacy policy.</p>
+          <ul class="m-elements"><li><strong>Types of data processed:</strong> Usage data (e.g. websites visited, interest in content, access times), meta/communication data (e.g. device information, IP addresses).</li><li><strong>Persons concerned:</strong> Users (e.g.. For example, website visitors, users of online services).</li><li><strong>Purposes of processing:</strong> provision of our online offer and user experience, provision of contractual services and customer service. </li><li><strong>Legal basis:</strong> Legitimate interests (Art. 6 para 1 p. 1 lit. f. DSGVO). </li></ul><p><strong>Services and service providers used:</strong></p><ul class="m-elements"><li><strong>Google Fonts:</strong> We integrate the fonts ("Google Fonts") of the provider Google, whereby the user data is used solely for the purpose of displaying the fonts in the user's browser. The integration is based on our legitimate interests in a technically secure, maintenance-free and efficient use of fonts, their uniform presentation, as well as taking into account possible licensing restrictions for their integration. Service provider: Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Ireland, parent company: Google LLC, 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA; website: <a href="https://fonts.google.com/" target="_blank">https://fonts.google.com/</a>; Privacy Policy: <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy.</a></li></ul><h2 id="m15">Change and Update Privacy Policy</h2><p>We encourage you to periodically review the contents of our Privacy Policy. We adapt the Privacy Policy as soon as the changes in the data processing activities we carry out make it necessary. We will inform you as soon as the changes require an act of cooperation on your part (e.g. consent) or other individual notification.</p>
+          <p>Where we provide addresses and contact information for companies and organizations in this Privacy Policy, please note that addresses may change over time and please check the information before contacting us.</p>
+          <h2 id="m10">Rights of data subjects</h2><p>As a data subject, you are entitled to various rights under the GDPR, which arise in particular from Art. 15 to 21 DSGVO:</p><ul><li><strong>Right to object: You have the right to object at any time, on grounds relating to your particular situation, to the processing of personal data relating to you which is carried out on the basis of Art. 6(1)(e) or (f) DSGVO; this also applies to profiling based on these provisions. If the personal data concerning you is processed for the purpose of direct marketing, you have the right to object at any time to the processing of personal data concerning you for the purpose of such marketing; this also applies to profiling, insofar as it is associated with such direct marketing.</strong></li><li><strong>Right of withdrawal in the case of consent:</strong> You have the right to withdraw any consent you have given at any time. </li><li><strong>Right of access:</strong> You have the right to request confirmation as to whether data in question is being processed and to information about this data, as well as further information and copy of the data in accordance with the legal requirements.</li><li><strong>Right of rectification:</strong> You have the right, in accordance with the legal requirements, to request the completion of the data concerning you or the correction of incorrect data concerning you. </li><li><strong>Right to erasure and restriction of processing:</strong> You have, in accordance with the law, the right to request that data concerning you be erased without undue delay, or alternatively, in accordance with the law, to request restriction of the processing of the data. </li><li><strong>Right to data portability:</strong> You have the right to receive data concerning you, which you have provided to us, in a structured, common and machine-readable format in accordance with the legal requirements, or to demand its transfer to another responsible party. </li><li><strong>Complaint to supervisory authority:</strong> Without prejudice to any other administrative or judicial remedy, you have the right to lodge a complaint with a supervisory authority, in particular in the Member State of your habitual residence, place of work or the place of the alleged infringement, if you consider that the processing of personal data concerning you infringes the requirements of the GDPR.</li></ul>
+<p class="seal"><a href="https://datenschutz-generator.de/?l=de" title="Legal text by Dr. Schwenke - please click for more information." target="_blank" rel="noopener noreferrer nofollow">Created with free Datenschutz-Generator.de by Dr. Thomas Schwenke</a></p>
+</div>
 
-          <br /><br />Accountability for links<br />
-          Responsibility for the content of external links (to web pages of
-          third parties) lies solely with the operators of the linked pages. No
-          violations were evident to us at the time of linking. Should any legal
-          infringement become known to us, we will remove the respective link
-          immediately.<br /><br />Copyright<br />
-          Our web pages and their contents are subject to German copyright law.
-          Unless expressly permitted by law, every form of utilizing,
-          reproducing or processing works subject to copyright protection on our
-          web pages requires the prior consent of the respective owner of the
-          rights. Individual reproductions of a work are only allowed for
-          private use. The materials from these pages are copyrighted and any
-          unauthorized use may violate copyright laws.
-
-          <br /><br />
-          <i>Quelle: </i
-          ><a href="http://www.translate-24h.de" target="_blank"
-            >Übersetzungsdienst translate-24h.de</a
-          >
-          <br /><br />
-        </div>
         <div class="policy__info_content-box">
-          <h1>Datenschutzerklärung</h1>
-          <p>
-            Loem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam voluptua. At vero eos et accusam et justo duo dolores
-            et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
-            Loem ipsum dolor sit amet. Loem ipsum dolor sit amet, consetetur
-            sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore
-            et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
-            accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-            no sea takimata sanctus est Loem ipsum dolor sit amet.
-          </p>
-        </div>
-      </div>
+          <h1>Legal Notice</h1>
+          <h2 id="m46">Service provider</h2>
+          <p>Stefan Gall.</p>
+          <p>Meinelstr. 8.</p>
+          <p>73479 Ellwangen.</p>
+          <p>Germany.</p>
+          <h2 id="m56">Contact options</h2><p>Email address: <a href="mailto:stefan.gall08@gmail.com">stefan.gall08@gmail.com</a></p>
+          <h2 id="m172">Social media and other online presences</h2><p>This imprint also applies to the following social media presences and online profiles:</p>
+          <p><a href="https://www.instagram.com/gallographic" target="_blank">https://www.instagram.com/gallographic</a></p>
+          <h2 id="m65">Liability and property rights information</h2><p><strong>Disclaimer</strong>: The contents of this online offer have been prepared carefully and according to our current knowledge, but are for information purposes only and do not have any legally binding effect, unless it is legally binding information (eg, the imprint, privacy policy, terms and conditions or mandatory instructions of consumers). We reserve the right to change or delete the contents in whole or in part, provided that contractual obligations remain unaffected. All offers are subject to change and non-binding. </p>
+          <p><strong>Links to external websites</strong>: Contents of external websites, to which we refer directly or indirectly, are outside our area of responsibility and we do not adopt them as our own. For all contents and in particular for damage, which develops from the use of the information callable in the linked web pages, alone the offerer of the linked web pages is responsible.</p>
+          <p><strong>Copyrights and Trademarks</strong>: All content displayed on this website, such as texts, photographs, graphics, brands and trademarks are protected by the respective protective rights (copyrights, trademark rights). The use, reproduction, etc. are subject to our rights or the rights of the respective authors or rights managers.</p>
+          <p><strong>Notices of legal violations</strong>: If you notice any legal violations within our Internet presence, we ask you to point them out to us. We will remove illegal content and links immediately upon becoming aware of them.</p>
+          <!-- <h2 id="m169">Image credits</h2><p>Image sources and copyright notices:</p>
+          <p>XY</p> -->
+          <p class="seal"><a href="https://datenschutz-generator.de/?l=de" title="Legal text by Dr. Schwenke - please click for more information." target="_blank" rel="noopener noreferrer nofollow">Created with free Datenschutz-Generator.de by Dr. Thomas Schwenke</a></p>
+          
+          Translated with www.DeepL.com/Translator (free version)        </div>
+      
     </section>
     <script>
       AOS.init();

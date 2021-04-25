@@ -19,29 +19,28 @@ window.addEventListener(
     });
 
     //Datenschutzerklärung Open
-    let datenschutz = document.querySelectorAll(".footer__policy ul li");
-    let policy = document.querySelector(".policy__info");
-    let policyClose = document.querySelectorAll(".policy__info_close");
+    // let datenschutz = document.querySelectorAll(".footer__policy ul li");
+    // let policy = document.querySelector(".policy__info");
+    // let policyClose = document.querySelectorAll(".policy__info_close");
 
-    datenschutz.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        e.stopPropagation();
-        policy.classList.add("open");
-      });
-    });
+    // datenschutz.forEach((item) => {
+    //   item.addEventListener("click", (e) => {
+    //     e.stopPropagation();
+    //     policy.classList.add("open");
+    //   });
+    // });
 
-    policyClose.forEach((item) => {
-      item.addEventListener("click", (e) => {
-        e.stopPropagation();
-        policy.classList.remove("open");
-      });
-    });
+    // policyClose.forEach((item) => {
+    //   item.addEventListener("click", (e) => {
+    //     e.stopPropagation();
+    //     policy.classList.remove("open");
+    //   });
+    // });
   },
   false
 );
 
 //jQuery Part
-
 jQuery.noConflict();
 jQuery(document).ready(function ($) {
   $(document).ready(function () {
@@ -55,15 +54,14 @@ jQuery(document).ready(function ($) {
         );
       });
     });
-
-    // $(function () {
-    //   $(".footer__policy ul li").click(function () {
-    //     setTimeout(function () {
-    //       $("html, body").animate({
-    //         scrollTop: $(window).scrollTop() + 900,
-    //       });
-    //     }, 200);
-    //   });
-    // });
+    $(function () {
+      $(".footer__policy ul li").click(function () {
+        setTimeout(function () {
+          $("html, body").animate({
+            scrollTop: $(window).scrollTop() + 940,
+          }, "slow");
+        }, 0);
+      });
+    });
   });
 });
